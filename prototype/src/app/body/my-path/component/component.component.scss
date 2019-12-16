@@ -6,105 +6,106 @@
   margin-top: 4%;
   margin-bottom: 4%;
   width: 100%;
-
+  
   .componentTitle {
-    display: flex;
-    flex-direction: row;
-    font-size: 40px;
-    font-weight: lighter;
-    width: 100%;
-
-    .componentPercentageDone {
-      font-weight: 400;
-      margin-left: 5px;
-      font-family: NoaRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif !important;
-    }
-  }
-
-  .topic {
-    display: flex;
-    flex-direction: row;
-    min-width: fit-content;
-    margin-top: 20px;
-    background-color: #f4f6f9;
-    font-weight: lighter;
-
-    .frontImageTopic {
-      min-width: 100px;
-      min-height: 100px;
-
-      .frontImageTopicCircle {
-        background-color: #0099ff;
-        position: absolute;
-        width: 80px;
-        height: 80px;
-        border: 3px solid #0099ff;
-        border-radius: 50%;
-        margin-top: 7px;
-        margin-left: 7px;
-
-        .frontImageTopicCircleSquare {
-          width: 45px;
-          height: 45px;
-          border: 2px solid white;
-          margin-left: 19.5%;
-          margin-top: 19%;
-
-          .frontImageTopicCircleSquareCircle {
-            width: 40px;
-            height: 40px;
-            border: 2px solid white;
-            border-radius: 50%;
-            margin-top: 1px;
-            margin-left: 1px;
-
-          }
-        }
-      }
-    }
-
-    .topicHead {
-      min-width: 40%;
-      min-height: 70px;
       display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      margin-left: 10px;
-
-      .topicTitle {
-        font-size: 25px;
-      }
-
-      .topicSubtitle {
-        font-size: 18px;
-      }
-    }
-
-    .percentageIndicator {
+      flex-direction: row;
+      font-size: 40px;
+      font-weight: lighter;
       width: 100%;
-      display: flex;
-
-      .progressBar {
-        margin-top: 7%;
-        height: 20px;
-        border-radius: 20px;
-        width: 88%;
-      }
-
-      .percentageDone {
-        font-family: NoaRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif !important;
+      
+      .componentPercentageDone {
+          font-weight: 400;
+          margin-left: 5px;
+          font-family: NoaRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif !important;
+        }
+    }
+    
+    .topic {
+        display: flex;
+        flex-direction: row;
+        min-width: fit-content;
+        margin-top: 20px;
+        background-color: #f4f6f9;
+        font-weight: lighter;
+        
+        .frontImageTopic {
+            min-width: 100px;
+            min-height: 100px;
+            
+            .frontImageTopicCircle {
+                background-color: #0099ff;
+                position: absolute;
+                width: 80px;
+                height: 80px;
+                border: 3px solid #0099ff;
+                border-radius: 50%;
+                margin-top: 7px;
+                margin-left: 7px;
+                
+                .frontImageTopicCircleSquare {
+                    width: 45px;
+                    height: 45px;
+                    border: 2px solid white;
+                    margin-left: 19.5%;
+                    margin-top: 19%;
+                    
+                    .frontImageTopicCircleSquareCircle {
+                        width: 40px;
+                        height: 40px;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                        margin-top: 1px;
+                        margin-left: 1px;
+                        
+                    }
+                }
+            }
+        }
+        
+        .topicHead {
+            font-weight: 500;
+            min-width: 40%;
+            min-height: 70px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-left: 10px;
+            
+            .topicTitle {
+                font-size: 27px;
+            }
+            
+            .topicSubtitle {
+                font-size: 17px;
+            }
+        }
+        
+        .percentageIndicator {
+            width: 100%;
+            display: flex;
+            
+            .progressBar {
+                margin-top: 7%;
+                height: 20px;
+                border-radius: 20px;
+                width: 88%;
+            }
+            
+            .percentageDone {
+                font-family: NoaRegular, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", sans-serif !important;
         margin-top: 7%;
         margin-left: 20px;
-      }
     }
-  }
+}
+}
 
-  .viewLessonHidden {
+.viewLessonHidden {
     display: none;
-  }
+}
 
 
-  .viewLesson {
+.viewLesson {
     min-height: 40px;
     background-color: rgba(0, 0, 0, 0.005);
     width: 100%;
@@ -116,46 +117,46 @@
     position: relative;
     display: flex;
     flex-direction: row;
-
+    
     .lessons {
-      white-space: nowrap;
-      display: flex;
-      flex-direction: column;
-
-      .circles {
-        width: 100%;
+        white-space: nowrap;
         display: flex;
-        overflow: scroll;
-        scrollbar-width: none;
-        padding-bottom: 20px;
-        padding-top: 20px;
-
-        .lesson {
-          background-color: #f4f6f9;
-          border-radius: 50%;
-          margin-left: 15px;
-          margin-right: 15px;
-          width: 140px;
-          height: 140px;
-          z-index: 2;
+        flex-direction: column;
+        
+        .circles {
+            width: 100%;
+            display: flex;
+            overflow: scroll;
+            scrollbar-width: none;
+            padding-bottom: 20px;
+            padding-top: 20px;
+            
+            .lesson {
+                background-color: #f4f6f9;
+                border-radius: 50%;
+                margin-left: 15px;
+                margin-right: 15px;
+                width: 140px;
+                height: 140px;
+                z-index: 2;
+            }
         }
-      }
-
-      .lessonText {
-        display: flex;
-        justify-content: space-around;
-        flex-direction: row;
-        width: 100%;
-        padding-left: 30px;
-
-        .lessonTXT {
-          margin-left: 20px;
-          width: 120px;
-          margin-right: 20px;
+        
+        .lessonText {
+            display: flex;
+            justify-content: space-around;
+            flex-direction: row;
+            width: 100%;
+            padding-left: 30px;
+            
+            .lessonTXT {
+                margin-left: 20px;
+                width: 120px;
+                margin-right: 20px;
+            }
         }
-      }
     }
-
+    
     .divideBar {
       height: 10px;
       margin-left: -30px;
@@ -166,5 +167,5 @@
       top: 45%;
       z-index: 1;
     }
-  }
+}
 }
