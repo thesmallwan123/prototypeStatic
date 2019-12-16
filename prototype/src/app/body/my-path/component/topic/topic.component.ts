@@ -24,7 +24,6 @@ export class TopicComponent implements OnInit {
     this.topics = this.GetData.getTopic();
     this.components = this.GetData.getComp();
     this.result = this.topics.filter(o1 => this.components.some(o2 => o1.componentID === o2.id));
-    console.log(this.result)
   }
   getWidth() {
     this.showLessons();

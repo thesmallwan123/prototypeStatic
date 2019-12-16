@@ -24,11 +24,9 @@ export class ComponentComponent implements OnInit {
   Comp() {
     this.components = this.getData.getComp();
     for(let i =0; i<this.components.length; i++){
-      console.log(this.components[i].id + " ---------- COMPONENT")
       this.Top(i);
       this.components[i].topic = this.object;
     }
-    console.log(this.components)
     return this.components;
   }
 
@@ -36,11 +34,8 @@ export class ComponentComponent implements OnInit {
     this.topics = this.getData.getTopic();
     this.object = [];
     for(let a = 0; a < this.components[i].topic.length; a++){
-      // console.log(this.components[i].topic)
-      // console.log(this.topics[this.sid]);
       this.object.push(this.topics[this.id]);
       this.id = this.id+1;
-      console.log(this.id)
     }
   }
 

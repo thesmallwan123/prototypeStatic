@@ -339,7 +339,6 @@ export class GetDataService {
 
   getComp() {
     const comp = this.components;
-    // console.log(comp)
     return comp;
   }
   
