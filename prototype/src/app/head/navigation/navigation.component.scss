@@ -1,0 +1,47 @@
+.navigation{
+    display: flex;
+    min-width: 10px;
+    width: auto;
+    max-width: 220px;
+    min-height: 33px;
+    flex-direction: row;
+    border-radius: 20px;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.7);
+    .seperator{
+        font-size: 14px;
+    }
+    .navItem{
+        border-radius: 20px;
+        position: absolute;
+        cursor: pointer;
+        
+        .linkText{
+            text-decoration: none;
+            color: black;
+            position: absolute;
+            top: 5px;
+            right: 15px;
+            // cursor: pointer;
+        }
+    }
+    
+    #L{
+        width: 37%;
+        height: 33px;
+        left: 0px;
+        padding-left: 14px;
+    }
+    #R{
+        width: 60%;
+        height: 33px;
+        right: 0px;
+        text-align: right;
+    }
+
+
+    //navItem gets this class when clicked
+    .activeRoute{
+        background-color: rgb(255, 255, 255);
+    }
+}

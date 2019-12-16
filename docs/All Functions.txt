@@ -1,0 +1,49 @@
+all functions needed
+
+    %'es    
+        component% ->
+            (all topics%)/(amount of topics * 100)
+
+        topic% ->
+            (gets data from Lesson, standard is 0)
+			
+		lesson% ->
+			(gets data from Page, standard is 0)
+			
+        OnComplete lesson && quiz ->
+            add (1 / (amount of lessons +1) * 100) to topic-%done
+			goNextLesson
+			
+		OnComplete page
+			add (1 / amount of pages * 100) to lesson-%done
+			goNextPage
+			
+    checkbadges
+        OnInit header ->
+            get allBadges from user
+
+        onInit myTravel ->
+            get all badges from user
+
+    addTobadge
+        OnComplete quiz ->
+            add id of Topic to array of earnedBadges in User
+
+    formCheck
+        onSubmit question ->
+            check if awnser(s) is correct
+                if(correct == true){
+                    if (nextquestion = false){
+                        return completed, addTobadge
+                    }
+                    else{
+						return OnComplete page()
+                    }
+                }
+                else{
+                    echo "AI! please revisit lesson XX"
+                }
+				
+		
+    
+    

@@ -1,0 +1,10 @@
+Pages:
+	Mypath (Is an overview with all components, topics, lessons and quizes)
+		components
+			topics(onclick to lesson or quiz)
+				
+			lesson
+				page
+				quiz
+				
+	MyNetwork (view where is who, with contact data)
