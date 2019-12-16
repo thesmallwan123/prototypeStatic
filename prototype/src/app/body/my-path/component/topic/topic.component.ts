@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDataService } from 'src/app/services/get-data.service';
+import { GetDataService } from '../../../../services/get-data.service';
 
 @Component({
   selector: 'app-topic',
@@ -13,10 +13,18 @@ export class TopicComponent implements OnInit {
   progress = 12;
   topics;
   components;
-
+  result;
 
   ngOnInit() {
     this.getWidth();
+    this.getTopic();
+  }
+  getTopic(){
+    // if you want to be more clever...
+    this.topics = this.GetData.getTopic();
+    this.components = this.GetData.getComp();
+    this.result = this.topics.filter(o1 => this.components.some(o2 => o1.componentID === o2.id));
+    console.log(this.result)
   }
   getWidth() {
     this.showLessons();

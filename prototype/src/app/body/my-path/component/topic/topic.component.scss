@@ -46,16 +46,20 @@
           font-size: 25px;
       }
   }
-  .progressBar{
-      margin-top: 4%;
-      height: 20px;
-      border-radius: 20px;
-      width: 40%;
-  }
-
-  .percentageDone{
-      margin-top: 4%;
-      margin-left: 20px;
+  .percentageIndicator{
+    width: 100%;
+    display: flex;
+    .progressBar{
+        margin-top: 7%;
+        height: 20px;
+        border-radius: 20px;
+        width: 88%;
+    }
+  
+    .percentageDone{
+        margin-top: 7%;
+        margin-left: 20px;
+    }
   }
 }
 

@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { GetDataService } from '../../services/get-data.service';
 
 @Component({
   selector: 'app-my-path',
@@ -7,10 +6,8 @@ import { GetDataService } from '../../services/get-data.service';
   styleUrls: ['./my-path.component.scss']
 })
 export class MyPathComponent implements OnInit {
-  component;
-  constructor(private getData: GetDataService) { }
+  constructor() { }
   ngOnInit() {
-    this.component = this.getData.getComp();
   }
 
 }
