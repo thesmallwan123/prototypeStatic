@@ -19,7 +19,7 @@ export class GetDataService {
 
   topics: Object = [
     {id: 1, title: "Scrum", description: "How we work according to the Scrum framework", done: 0, badgeID: 1, },
-    {id: 2, title: "SAFe", description: "How our Agile practises are scaled in a common framework", done: 0, badgeID: 1, },
+    {id: 2, title: "SAFe", description: "How our Agile practises are scaled in a common framework", done: 12, badgeID: 1, },
     {id: 3, title: "Digital Agile Release Planes", description: "An overview of the diffrent Digital Agile Release Planes", done: 0, badgeID: 1, },
     {id: 4, title: "Front-end and back-end", description: "The diffrence between front-ends and back-ends", done: 0, badgeID: 2, },
     {id: 5, title: "AFKL's digitals produts", description: "And overview of all the digital B2C products of AFKL", done: 0, badgeID: 2, },
@@ -351,7 +351,6 @@ export class GetDataService {
     var amount = 0;
     var result;
     for(let i =0; i<allAchievedOrNot.length; i++){
-      console.log(allAchievedOrNot[i].done);
       if(allAchievedOrNot[i].done !== 0){
         amount = amount + allAchievedOrNot[i].done;
       } 

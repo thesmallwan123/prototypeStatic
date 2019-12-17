@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from '../../../services/get-data.service';
 import { stringify } from 'querystring';
+import { element } from 'protractor';
 
 @Component({
   selector: 'app-component',
@@ -14,15 +15,35 @@ export class ComponentComponent implements OnInit {
   length;
   result = [];
   object =[];
-  id =0;
+  id = 0;
+  classID: any;
+  width;
   percentageDoneTopic;
   
   constructor(private getData: GetDataService) { }
   ngOnInit() {
     this.Comp();
   }
-  
-  
+  showLessons(id) {
+    const element = document.getElementById(id);
+    element.classList.add('viewLesson');
+    const element2 = document.getElementById("divWidth");
+    this.width = element2.offsetWidth;
+    this.width = this.width - 40;
+    setTimeout(function(){
+        hideLesson(id);
+    },5000);
+
+    function hideLesson(id) {
+      const element = document.getElementById(id);
+      return element.classList.remove('viewLesson');
+    }
+  }
+
+
+
+
+
   Comp() {
     this.components = this.getData.getComp();
     for(let i =0; i<this.components.length; i++){

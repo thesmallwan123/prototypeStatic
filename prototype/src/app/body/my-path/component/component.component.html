@@ -2,21 +2,100 @@
   <div class="componentTitle">
     {{components.title}} -<div class="componentPercentageDone">{{components.done}}%</div>
   </div>
-  <div class="topic mat-elevation-z2" *ngFor="let topic of components.topic">
-    <div class="frontImageTopic">
-      <div class="frontImageTopicCircle">
-        <div class="frontImageTopicCircleSquare">
-          <div class="frontImageTopicCircleSquareCircle"></div>
+  <div class="combinedLessonsAndTopic"  *ngFor="let topic of components.topic">
+    <div ngClass="{{topic.id}} mat-elevation-z2 topic"  (mouseenter)=showLessons(topic.id)>
+      <div class="frontImageTopic">
+        <div class="frontImageTopicCircle">
+          <div class="frontImageTopicCircleSquare">
+            <div class="frontImageTopicCircleSquareCircle"></div>
+          </div>
         </div>
       </div>
+      <div class="topicHead">
+        <div class="topicTitle">Topic {{topic.id}}: {{topic.title}}</div>
+        <div class="topicSubtitle">{{topic.description}}</div>
+      </div>
+      <div class="percentageIndicator">  
+        <mat-progress-bar class="progressBar" [value]=topic.done color="primary"></mat-progress-bar>
+        <div class="percentageDone">{{topic.done}}%</div>
+      </div>
     </div>
-    <div class="topicHead">
-      <div class="topicTitle">Topic {{topic.id}}: {{topic.title}}</div>
-      <div class="topicSubtitle">{{topic.description}}</div>
+    <div class="viewLessonHidden" id="{{topic.id}}">
+      <div class="lessons" id="divWidth">
+        <div class="circles">
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+          <div class="lesson mat-elevation-z8">
+          </div>
+        </div>
+        <div class="lessonText">
+          <div class="lessonTXT">
+            lesson 1
+          </div>
+          <div class="lessonTXT">
+            lesson 2
+          </div>
+          <div class="lessonTXT">
+            lesson 3
+          </div>
+          <div class="lessonTXT">
+            lesson 4
+          </div>
+          <div class="lessonTXT">
+            lesson 5
+          </div>
+          <div class="lessonTXT">
+            lesson 6
+          </div>
+          <div class="lessonTXT">
+            lesson 7
+          </div>
+          <div class="lessonTXT">
+            lesson 8
+          </div>
+          <div class="lessonTXT">
+            lesson 9
+          </div>
+          <div class="lessonTXT">
+            lesson 10
+          </div>
+          <div class="lessonTXT">
+            lesson 11
+          </div>
+          <div class="lessonTXT">
+            lesson 12
+          </div>
+          <div class="lessonTXT">
+            lesson 13
+          </div>
+          
+        </div>
+      </div>
+    
+      <div class="divideBar" [style.width.px]=width></div>
     </div>
-    <div class="percentageIndicator">  
-      <mat-progress-bar class="progressBar" [value]=topic.done color="primary"></mat-progress-bar>
-      <div class="percentageDone">{{topic.done}}%</div>
-    </div>
+
   </div>
 </div>
