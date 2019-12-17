@@ -14,6 +14,7 @@ export class ComponentComponent implements OnInit {
   result = [];
   object =[];
   id =0;
+  percentageDoneTopic = 32;
 
   constructor(private getData: GetDataService) { }
   ngOnInit() {

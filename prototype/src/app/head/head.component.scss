@@ -11,15 +11,16 @@
         flex-direction: column;
         margin-left: 50px;
         margin-right: 50px;
-        width: 30%;
+        width: 40%;
         .title{
             text-align: left;
             letter-spacing: 3px;
             margin-bottom: 0px;
             height: 70%;
             h1{
+                margin: 0px;
                 font-weight: 100;
-                font-size: 60px;
+                font-size: 95px;
                 color: white;
             }
         }
@@ -38,11 +39,11 @@
 
 
     .rightSide{
-        width: 100%;
+        width: 63%;
         height: 100%;
         // background-image: url('../../assets/badges/Badges.svg');
         background-repeat: no-repeat;
-        margin-left: 5%;
+        margin-right: 1%;
         margin-top: 10px;
         display: flex;
         flex-direction: column;
@@ -55,7 +56,7 @@
             .imageTEST{
                 background-size: contain;
                 background-repeat: no-repeat;
-                width: 60px !important;
+                min-width: 55px !important;
                 margin-left: 40px;
 
                 .text{

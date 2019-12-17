@@ -21,7 +21,7 @@ export class GetDataService {
   topics: Object = [
     {id: 1, title: "Scrum", description: "How we work according to the Scrum framework", done: 0, badgeID: 1, },
     {id: 2, title: "SAFe", description: "How our Agile practises are scaled in a common framework", done: 0, badgeID: 1, },
-    {id: 3, title: "Digital Agile Release Planes", description: "An overview og the diffrent Digital Agile Release Planes", done: 0, badgeID: 1, },
+    {id: 3, title: "Digital Agile Release Planes", description: "An overview of the diffrent Digital Agile Release Planes", done: 0, badgeID: 1, },
     {id: 4, title: "Front-end and back-end", description: "The diffrence between front-ends and back-ends", done: 0, badgeID: 2, },
     {id: 5, title: "AFKL's digitals produts", description: "And overview of all the digital B2C products of AFKL", done: 0, badgeID: 2, },
     {id: 6, title: "IT Departement", description: "Get to know the four IT departements of AFKL", done: 0, badgeID: 3, },
@@ -41,7 +41,7 @@ export class GetDataService {
   ]
   
   lessons: Object = [
-    {id: 60, topicID: 8, title: "Basic Explenation"},
+    {id: 60, topicID: 8, title: "Basic Explanation"},
     {id: 61, topicID: 8, title: "DevOps Goals"},
     {id: 62, topicID: 8, title: "Plan"},
     {id: 63, topicID: 8, title: "Code"},
@@ -64,7 +64,7 @@ export class GetDataService {
         lessonID: 60,
         text: [
           "Let’s first take a look back into history. Back in the days, before DevOps, software development at AFKL and many other companies happened according to the waterfall methodology. The waterfall methodology consists of the different software development phases, which happen in linear sequence. This means that the next phase only starts once the phase before it has been finished.",
-          "The different phases of the waterfall methodology are the requirements phase, design phase, implementation phase, verification phase, and the maintenance phase. Go to Topic 8: Software Development Process  to get more information about the different phases."
+          "The different phases of the waterfall methodology are the requirements phase, design phase, implementation phase, verification phase, and the maintenance phase. Go to Topic 8: Software Development Process to get more information about the different phases."
         ],
         asset: "../../assets/gifs/component3/lesson60/1.2"
       },
@@ -73,7 +73,7 @@ export class GetDataService {
         lessonID: 60,
         text: [
           "During the time of the waterfall methodology, development and operations were two different silos which were quite separated from each other. Development would worry about the creation of the software, throw it “over the wall” to operations, who had to maintain the software as long as it was alive (this almost sounds like giving away your child for adoption).",
-          "So, development creates a piece of software and gives it to operations to watch it and take care of it afterwards? That means that if something breaks in the software, operations has to fix it while actually development knows how it is built. That does not sound very logical, right?"
+          "So, development creates a piece of software and gives it to operations to watch it and take care of it afterwards? That means that if something breaks in the software, operations has to fix it while actually development knows how it is build. That does not sound very logical, right?"
         ],
         asset: "../../assets/gifs/component3/lesson60/1.3"
       },
@@ -166,7 +166,7 @@ export class GetDataService {
         lessonID: 61,
         text: [
           "Lower failure rates of new releases and faster mean time to recovery are reached by agile (programming) practices introduced by DevOps.",
-          "Short development cycles with frequent code versions and revisions help to track when and where the software breaks down due to bad code. If a failure is detected, the team can easily roll back to an earlier version of the code which had already proven to work well. Furthermore, the small changes between different code versions make that it is easier to recover from problems, as only a small part of the code causes the problem and has to be changed."
+          "Short development cycles with frequent code versions and revisions help to track when and where the software breaks down due to bad code. If a failure is detected, the team can easily roll back to an earlier version of the code, which had already proven to work well. Furthermore, the small changes between different code versions make that it is easier to recover from problems, as only a small part of the code causes the problem and has to be changed."
         ],
         asset: "../../assets/gifs/component3/lesson61/1.4"
       },
