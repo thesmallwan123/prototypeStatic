@@ -22,6 +22,7 @@ import {MatDividerModule} from '@angular/material/divider';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import { MatTooltipModule } from '@angular/material';
 import { GetDataService } from './services/get-data.service';
 
 @NgModule({
@@ -44,6 +45,7 @@ import { GetDataService } from './services/get-data.service';
     MatCardModule,
     MatButtonModule,
     MatProgressBarModule,
+    MatTooltipModule,
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
