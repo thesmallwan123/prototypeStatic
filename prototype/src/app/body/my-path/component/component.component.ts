@@ -11,11 +11,12 @@ export class ComponentComponent implements OnInit {
 
   components;
   topics;
+  length;
   result = [];
   object =[];
   id =0;
-  percentageDoneTopic = 32;
-
+  percentageDoneTopic;
+  
   constructor(private getData: GetDataService) { }
   ngOnInit() {
     this.Comp();
@@ -27,10 +28,14 @@ export class ComponentComponent implements OnInit {
     for(let i =0; i<this.components.length; i++){
       this.Top(i);
       this.components[i].topic = this.object;
+      for(let b = 0; b<1; b++){
+        this.components[i].done = this.getData.calcPercentage(this.components[i].topic);
+        // console.log(this.components[i].done)
+      }
     }
     return this.components;
   }
-
+  
   Top(i){
     this.topics = this.getData.getTopic();
     this.object = [];

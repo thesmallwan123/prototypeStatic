@@ -1,7 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
-import { Observable } from 'rxjs';
+import { map, count } from 'rxjs/operators';
 
 
 @Injectable({
@@ -9,13 +8,13 @@ import { Observable } from 'rxjs';
 })
 export class GetDataService {
   components: Object = [
-    {id: 1, topic:[1,2,3], title: "Digital Way of working", description: "Here you find all the topics."},
-    {id: 2, topic:[4,5], title: "Digital Products", description: "Here you find all the topics."},
-    {id: 3, topic:[6,7], title: "IT Organisation", description: "Here you find all the topics."},
-    {id: 4, topic:[8,9,10,11], title: "IT Ways of Working", description: "Here you find all the topics."},
-    {id: 5, topic:[12], title: "Application Architecture", description: "Here you find all the topics."},
-    {id: 6, topic:[13,14,15,16], title: "Security", description: "Here you find all the topics."},
-    {id: 7, topic:[17,18,19], title: "IT Service Management", description: "Here you find all the topics."}
+    {id: 1, done:0, topic:[1,2,3], title: "Digital Way of working", description: "Here you find all the topics."},
+    {id: 2, done:0, topic:[4,5], title: "Digital Products", description: "Here you find all the topics."},
+    {id: 3, done:0, topic:[6,7], title: "IT Organisation", description: "Here you find all the topics."},
+    {id: 4, done:0, topic:[8,9,10,11], title: "IT Ways of Working", description: "Here you find all the topics."},
+    {id: 5, done:0, topic:[12], title: "Application Architecture", description: "Here you find all the topics."},
+    {id: 6, done:0, topic:[13,14,15,16], title: "Security", description: "Here you find all the topics."},
+    {id: 7, done:0, topic:[17,18,19], title: "IT Service Management", description: "Here you find all the topics."}
   ]
 
   topics: Object = [
@@ -347,4 +346,18 @@ export class GetDataService {
     return topics;
   }
   
+
+  calcPercentage(allAchievedOrNot){
+    var amount = 0;
+    var result;
+    for(let i =0; i<allAchievedOrNot.length; i++){
+      console.log(allAchievedOrNot[i].done);
+      if(allAchievedOrNot[i].done !== 0){
+        amount = amount + allAchievedOrNot[i].done;
+      } 
+      result = amount/allAchievedOrNot.length;
+      result = result.toFixed(1);
+    }
+    return result;
+  }
 }

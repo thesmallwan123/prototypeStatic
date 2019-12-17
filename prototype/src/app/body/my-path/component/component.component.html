@@ -1,6 +1,6 @@
 <div class="component" *ngFor="let components of components">
   <div class="componentTitle">
-    {{components.title}} -<div class="componentPercentageDone">12%</div>
+    {{components.title}} -<div class="componentPercentageDone">{{components.done}}%</div>
   </div>
   <div class="topic mat-elevation-z2" *ngFor="let topic of components.topic">
     <div class="frontImageTopic">
