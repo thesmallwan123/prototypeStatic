@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map, count } from 'rxjs/operators';
 
 
 @Injectable({
@@ -18,33 +17,34 @@ export class GetDataService {
   ]
 
   topics: Object = [
-    {id: 1, title: "Scrum", description: "How we work according to the Scrum framework", done: 0, badgeID: 1, },
-    {id: 2, title: "SAFe", description: "How our Agile practises are scaled in a common framework", done: 12, badgeID: 1, },
-    {id: 3, title: "Digital Agile Release Planes", description: "An overview of the diffrent Digital Agile Release Planes", done: 0, badgeID: 1, },
-    {id: 4, title: "Front-end and back-end", description: "The diffrence between front-ends and back-ends", done: 0, badgeID: 2, },
-    {id: 5, title: "AFKL's digitals produts", description: "And overview of all the digital B2C products of AFKL", done: 0, badgeID: 2, },
-    {id: 6, title: "IT Departement", description: "Get to know the four IT departements of AFKL", done: 0, badgeID: 3, },
-    {id: 7, title: "E-Commerce", description: "learn about the E-Commerce departement and its groups", done: 0, badgeID: 3, },
-    {id: 8, title: "Development Process", description: "The diffrent stages of the software development process", done: 0, badgeID: 4, },
-    {id: 9, title: "DevOps", description: "The integration of development and operations in one process", done: 0, badgeID: 4, },
-    {id: 10, title: "Self Service", description: "AFKL's Self Servies as a wat to implement DevOps", done: 0, badgeID: 4, },
-    {id: 11, title: "Delivery Pipeline", description: "How to delivery of software has been automated in one pipeline", done: 0, badgeID: 4, },
-    {id: 12, title: "Architecture Overview", description: "Overview of the architecture of AFKL's Digital applications", done: 0, badgeID: 5, },
-    {id: 13, title: "IT Security", description: "get to know the diffrent kinds of IT security", done: 0, badgeID: 6, },
-    {id: 14, title: "Application Security Planning", description: "Application sucurity scans and AFKL;s Self Service Security Scan", done: 0, badgeID: 6, },
-    {id: 15, title: "Datacenter vs. Cloud", description: "Security related to hosting at a datacenter versus the cloud", done: 0, badgeID: 6, },
-    {id: 16, title: "PCI Compliancy", description: "How to deal with passenger information", done: 0, badgeID: 6, },
-    {id: 17, title: "Process", description: "The diffrent IT Service Management processes", done: 0, badgeID: 7, },
-    {id: 18, title: "Change Managment at AFKL", description: "How change management is practised at AFKL", done: 0, badgeID: 7, },
-    {id: 19, title: "Incident Management at AFKL", description: "How incident management is practised at AFKL", done: 0, badgeID: 7, },
+    {id: 1, done: 0, lessons:[], badgeID: 1, title: "Scrum", description: "How we work according to the Scrum framework"},
+    {id: 2, done: 0, lessons:[], badgeID: 1, title: "SAFe", description: "How our Agile practises are scaled in a common framework"},
+    {id: 3, done: 0, lessons:[], badgeID: 1, title: "Digital Agile Release Planes", description: "An overview of the diffrent Digital Agile Release Planes"},
+    {id: 4, done: 0, lessons:[], badgeID: 2, title: "Front-end and back-end", description: "The diffrence between front-ends and back-ends"},
+    {id: 5, done: 0, lessons:[], badgeID: 2, title: "AFKL's digitals produts", description: "And overview of all the digital B2C products of AFKL"},
+    {id: 6, done: 0, lessons:[], badgeID: 3, title: "IT Departement", description: "Get to know the four IT departements of AFKL"},
+    {id: 7, done: 0, lessons:[], badgeID: 3, title: "E-Commerce", description: "learn about the E-Commerce departement and its groups"},
+    {id: 8, done: 0, lessons:[], badgeID: 4, title: "Development Process", description: "The diffrent stages of the software development process"},
+    {id: 9, done: 40, lessons:[60, 61, 62, 63, 64, 65], badgeID: 4, title: "DevOps", description: "The integration of development and operations in one process"},
+    {id: 10, done: 0, lessons:[], badgeID: 4, title: "Self Service", description: "AFKL's Self Servies as a wat to implement DevOps"},
+    {id: 11, done: 0, lessons:[], badgeID: 4, title: "Delivery Pipeline", description: "How to delivery of software has been automated in one pipeline"},
+    {id: 12, done: 0, lessons:[], badgeID: 5, title: "Architecture Overview", description: "Overview of the architecture of AFKL's Digital applications"},
+    {id: 13, done: 0, lessons:[], badgeID: 6, title: "IT Security", description: "get to know the diffrent kinds of IT security"},
+    {id: 14, done: 0, lessons:[], badgeID: 6, title: "Application Security Planning", description: "Application sucurity scans and AFKL;s Self Service Security Scan"},
+    {id: 15, done: 0, lessons:[], badgeID: 6, title: "Datacenter vs. Cloud", description: "Security related to hosting at a datacenter versus the cloud"},
+    {id: 16, done: 0, lessons:[], badgeID: 6, title: "PCI Compliancy", description: "How to deal with passenger information"},
+    {id: 17, done: 0, lessons:[], badgeID: 7, title: "Process", description: "The diffrent IT Service Management processes"},
+    {id: 18, done: 0, lessons:[], badgeID: 7, title: "Change Managment at AFKL", description: "How change management is practised at AFKL"},
+    {id: 19, done: 0, lessons:[], badgeID: 7, title: "Incident Management at AFKL", description: "How incident management is practised at AFKL"},
   ]
   
   lessons: Object = [
-    {id: 60, topicID: 8, title: "Basic Explanation"},
-    {id: 61, topicID: 8, title: "DevOps Goals"},
-    {id: 62, topicID: 8, title: "Plan"},
-    {id: 63, topicID: 8, title: "Code"},
-    {id: 64, topicID: 8, title: "build"},
+    {id: 60, title: "Basic Explanation"},
+    {id: 61, title: "DevOps Goals"},
+    {id: 62, title: "Plan"},
+    {id: 63, title: "Code"},
+    {id: 64, title: "Build"},
+    {id: 65, title: "Test"},
   ]
   
   pages: Object = [

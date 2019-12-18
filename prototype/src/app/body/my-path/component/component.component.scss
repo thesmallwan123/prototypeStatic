@@ -110,24 +110,24 @@
     .viewLessonHidden {
       display: none;
     }
-
-
+    
+    
     .viewLesson {
       min-height: 40px;
-      background-color: rgba(0, 0, 0, 0.005);
       width: 100%;
+      background-color: rgba(0, 0, 0, 0.005);
       overflow-x: scroll;
       -ms-overflow-style: none;
       scrollbar-width: none;
       position: relative;
       display: flex;
       flex-direction: row;
-
+      z-index: 1;
       .lessons {
         white-space: nowrap;
         display: flex;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.02);
+        background-color: rgba(255, 255, 255, 0.904);
 
         .circles {
           width: 100%;
@@ -163,7 +163,7 @@
 
       .divideBar {
         height: 10px;
-        margin-left: 15px;
+        margin-left: 16px;
         background-color: #ff9933;
         overflow: hidden;
         display: inline-block;
