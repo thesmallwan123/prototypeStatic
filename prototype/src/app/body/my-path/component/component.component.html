@@ -21,79 +21,17 @@
       </div>
     </div>
     <div class="viewLessonHidden" id="viewLesson{{topic.id}}">
-      <div class="lessons" id="LESSONS{{topic.id}}">
+      <div class="lessons" *ngFor="let lesson of topic.lessons" id="LESSONS{{topic.id}}">
         <div class="circles">
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
-          <div class="lesson mat-elevation-z8">
-          </div>
           <div class="lesson mat-elevation-z8">
           </div>
         </div>
         <div class="lessonText">
           <div class="lessonTXT">
-            lesson 1
+            {{lesson.title}}
           </div>
-          <div class="lessonTXT">
-            lesson 2
-          </div>
-          <div class="lessonTXT">
-            lesson 3
-          </div>
-          <div class="lessonTXT">
-            lesson 4
-          </div>
-          <div class="lessonTXT">
-            lesson 5
-          </div>
-          <div class="lessonTXT">
-            lesson 6
-          </div>
-          <div class="lessonTXT">
-            lesson 7
-          </div>
-          <div class="lessonTXT">
-            lesson 8
-          </div>
-          <div class="lessonTXT">
-            lesson 9
-          </div>
-          <div class="lessonTXT">
-            lesson 10
-          </div>
-          <div class="lessonTXT">
-            lesson 11
-          </div>
-          <div class="lessonTXT">
-            lesson 12
-          </div>
-          <div class="lessonTXT">
-            lesson 13
-          </div>
-          
         </div>
       </div>
-    
       <div class="divideBar" [style.width.px]=width></div>
     </div>
 
