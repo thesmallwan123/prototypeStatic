@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from '../../../services/get-data.service';
-import { $ } from 'protractor';
 
 @Component({
   selector: 'app-component',

@@ -9,7 +9,7 @@ import { LessonComponent } from './body/my-path/component/topic/lesson/lesson.co
 const routes: Routes = [
   {path: 'myPath', component: MyPathComponent},
   {path: 'myNetwork', component: MyNetworkComponent},
-  {path: 'lesson', component: LessonComponent},
+  {path: 'lesson/:id', component: LessonComponent},
   {path: '', redirectTo: '/myPath', pathMatch: 'full'},
   {path: '**', redirectTo: '/myPath'},
 
