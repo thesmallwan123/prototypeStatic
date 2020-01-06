@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from '../../../services/get-data.service';
+import { $ } from 'protractor';
 
 @Component({
   selector: 'app-component',
@@ -20,22 +21,23 @@ export class ComponentComponent implements OnInit {
   classID: any;
   width;
   percentageDoneTopic;
-
-
+  
+  
   constructor(private getData: GetDataService) {}
   ngOnInit() {
     this.Comp();
-    // console.log(this.components[3].topic[1].lessons)
   }
   showLessons(id) {
-    const element = document.getElementById("viewLesson" + id);
-    const element2 = document.getElementById("LESSONS" + id);
-    element.classList.add('viewLesson');
-    this.width = element2.offsetWidth;
+    this.width = 0;
+    const element2 = document.getElementById("viewLesson" + id);
+    element2.classList.add('viewLesson');
+    this.width = element2.scrollWidth;
     this.width = this.width - 32;
+    
+    console.log(this.width)
     setTimeout(function () {
       hideLesson(id);
-    }, 100000);
+    }, 10000);
     
     function hideLesson(id) {
       const element = document.getElementById("viewLesson" + id);
@@ -77,10 +79,5 @@ export class ComponentComponent implements OnInit {
       this.idLesson = this.allTopics[this.idTopic].lessons[c];
       this.lessons.push(this.allLessons[this.idLesson]);
     }
-    // this.idLesson = this.topics[this.idTopic];
-    // for(let c =0; c<this.allTopics[this.idTopic].lessons.length; c++){
-    //   console.log(c)
-    //   // this.idLesson = this.idLesson +1;
-    // }
   }
 }
