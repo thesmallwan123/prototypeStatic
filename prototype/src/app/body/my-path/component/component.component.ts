@@ -57,24 +57,25 @@ export class ComponentComponent implements OnInit {
   }
   
   Top(i) {
-    // console.log("Loopt door Component")
     this.allTopics = this.getData.getTopic();
     this.topics = [];
     for (let a = 0; a < this.components[i].topic.length; a++) {
       this.Lesson(a,i);
-      this.allTopics[this.idTopic].lessons = this.lessons;
-      // console.log(this.allTopics[this.idTopic].lessons)
       this.topics.push(this.allTopics[this.idTopic]);
+      
+      //hier loopen om lessenID te vervangen met this.lessons
+      for(let b=0; b<this.topics[a].lessons.length; b++){
+        this.topics[a].lessons[b] = this.lessons[b]
+      }
       this.idTopic = this.idTopic + 1;
     }
   }
   Lesson(a,i){
-    // console.log("Loopt door Topic")
     this.allLessons = this.getData.getLessons();
     this.lessons = [];
     for(let c=0; c < this.allTopics[this.idTopic].lessons.length; c++){
       this.idLesson = this.allTopics[this.idTopic].lessons[c];
-      this.lessons.push(this.allLessons[this.idLesson]);
+      this.lessons.push(this.allLessons[this.idLesson])
     }
   }
 }

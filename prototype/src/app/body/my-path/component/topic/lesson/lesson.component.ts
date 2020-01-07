@@ -48,14 +48,12 @@ export class LessonComponent implements OnInit {
       this.page = this.allPages[this.mustHavePages[this.pageID]]
       this.allPerc.push(this.allPages[this.mustHavePages[i]])
     }
-    console.log(this.allPerc)
     this.calcPerc();
   }
 
 // Go to next page
   nextPage(){
     this.allPages[this.mustHavePages[this.pageID]].done = 100;
-    console.log(this.allPages[this.mustHavePages[this.pageID]].done)
     this.pageID = this.pageID + 1;
     const lastItem = this.mustHavePages.length -1;
     if(this.pageID > lastItem){
@@ -72,8 +70,6 @@ export class LessonComponent implements OnInit {
 
 //shows the page that you will be directed to next lesson
   showLessonCompletion(){
-    console.log("This lesson is completed, create popup in here")
-    console.log("OnSubmit, go to nextLesson")
     this.nextLesson();
   }
 
