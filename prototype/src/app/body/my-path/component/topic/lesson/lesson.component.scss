@@ -1,0 +1,72 @@
+.page{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+    padding: 0px !important;
+    .top{
+        width: 100%;    
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .lessonTitle{
+            position: relative;
+            font-size:30px;
+            padding-top: 23.433px;
+            margin-left: 10px;
+        }
+        .cancel{
+            position: absolute;
+            right: 23.433px;
+            top: 23.433px;
+            font-size: 40px;
+        }
+    }
+    .body{
+        display: flex;
+        padding: 18px;
+        .left{
+            display: flex;
+            flex-direction: column;
+            min-width: 50%;
+            padding: 20px;
+            
+            .p{
+                padding: 0px;
+                font-size: 18px;
+            }
+        }
+        .right{
+            min-width: 50%;
+            max-height: 500px;
+            justify-content: center;
+            display: flex;
+            .giphy{
+                min-width: 0px;
+                max-height: 300px;
+            }
+        }
+    }
+    .bottom{
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        .centerBar{
+            width: 100%;
+            border-radius: 20px;
+            height: 30px;
+            margin-top: 4%;
+        }
+        .button{
+            height: fit-content;
+            width: 5%;
+            margin: 30px;
+            background-color:rgb(0, 153, 255);
+            font-size: 65px;
+        }
+    }
+}

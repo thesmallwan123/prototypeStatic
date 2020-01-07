@@ -32,8 +32,6 @@ export class ComponentComponent implements OnInit {
     element2.classList.add('viewLesson');
     this.width = element2.scrollWidth;
     this.width = this.width - 32;
-    
-    console.log(this.width)
     setTimeout(function () {
       hideLesson(id);
     }, 10000);
