@@ -24,7 +24,7 @@ export class GetDataService {
     {id: 6, done: 0, lessons:[1], badgeID: 3, title: "IT Departement", description: "Get to know the four IT departements of AFKL"},
     {id: 7, done: 0, lessons:[1], badgeID: 3, title: "E-Commerce", description: "learn about the E-Commerce departement and its groups"},
     {id: 8, done: 0, lessons:[1], badgeID: 4, title: "Development Process", description: "The diffrent stages of the software development process"},
-    {id: 9, done: 40, lessons:[60, 61, 62, 63, 64, 65], badgeID: 4, title: "DevOps", description: "The integration of development and operations in one process"},
+    {id: 9, done: 0, lessons:[60, 61, 62, 63, 64, 65], badgeID: 4, title: "DevOps", description: "The integration of development and operations in one process"},
     {id: 10, done: 0, lessons:[1], badgeID: 4, title: "Self Service", description: "AFKL's Self Servies as a wat to implement DevOps"},
     {id: 11, done: 0, lessons:[1], badgeID: 4, title: "Delivery Pipeline", description: "How to delivery of software has been automated in one pipeline"},
     {id: 12, done: 0, lessons:[1], badgeID: 5, title: "Architecture Overview", description: "Overview of the architecture of AFKL's Digital applications"},
@@ -343,7 +343,7 @@ export class GetDataService {
       },
       {
         id: 23,
-        done: 100,
+        done: 0,
         lessonID: 63,
         text: [
           "Every developer works on a smaller part of the master code. They usually call this a ‘branch’. Whenever a developer makes a change to his/her part of the code, this is uploaded to the version control system (‘git’ as most developers call it) and tested (automatically of course, remember?).",
@@ -433,7 +433,7 @@ export class GetDataService {
 
 
   constructor() { }
-
+  percDone;
   getComp() {
     const comp = this.components;
     return comp;
@@ -452,6 +452,27 @@ export class GetDataService {
   getPages(){
     const pages = this.pages;
     return pages;
+  }
+
+
+  setComp(row){
+    this.components[row.id] = 100
+  }
+  setTopic(row){
+    this.topics[row.id] = 100;
+    
+  }
+  setLessons(row){
+    // console.log(row.asset)
+    const asset = row.asset;
+    const lesson = asset.split("/")[5];
+    const idtxt = lesson.split("n")[1];
+    const id = parseInt(idtxt);
+    console.log(id)
+  }
+  setPages(row){
+    this.pages[row.id].done = 100;
+    this.setLessons(row);
   }
   
 

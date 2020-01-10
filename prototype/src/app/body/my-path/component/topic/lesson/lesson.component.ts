@@ -19,8 +19,8 @@ export class LessonComponent implements OnInit {
   page;
   lesson;
   mustHavePages;
-  pageID =0;
-  percDoneLesson =0;
+  pageID = 0;
+  percDoneLesson = 0;
   allPerc = [];
   ngOnInit() { 
     this.getlesson();
@@ -53,7 +53,10 @@ export class LessonComponent implements OnInit {
 
 // Go to next page
   nextPage(){
-    this.allPages[this.mustHavePages[this.pageID]].done = 100;
+    this.getData.setPages(this.allPages[this.mustHavePages[this.pageID]]);
+    this.calcPerc();
+    // console.log(this.percDoneLesson)
+
     this.pageID = this.pageID + 1;
     const lastItem = this.mustHavePages.length -1;
     if(this.pageID > lastItem){

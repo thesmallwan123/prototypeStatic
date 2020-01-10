@@ -16,7 +16,7 @@ export class ComponentComponent implements OnInit {
   allLessons;
   length;
   idTopic = 0;
-  idLesson = 0;
+  idLesson:any = 0;
   width;
   percentageDoneTopic;
   
