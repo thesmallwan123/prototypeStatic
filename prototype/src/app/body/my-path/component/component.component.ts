@@ -7,26 +7,29 @@ import { GetDataService } from '../../../services/get-data.service';
   styleUrls: ['./component.component.scss']
 })
 export class ComponentComponent implements OnInit {
-
-  components;
+  
   topics =[];
+  lessons = [];
+  result = [];
+  components;
+  allTopics;
   allLessons;
   length;
-  result = [];
-  allTopics;
-  lessons = [];
   idTopic = 0;
   idLesson = 0;
-  classID: any;
   width;
   percentageDoneTopic;
   
   
   constructor(private getData: GetDataService) {}
   ngOnInit() {
+    this.components = this.getData.getComp();
+    this.allTopics = this.getData.getTopic();
+    this.allLessons = this.getData.getLessons();
     this.Comp();
   }
   showLessons(id) {
+    
     this.width = 0;
     const element2 = document.getElementById("viewLesson" + id);
     element2.classList.add('viewLesson');
@@ -47,7 +50,6 @@ export class ComponentComponent implements OnInit {
   
   
   Comp() {
-    this.components = this.getData.getComp();
     for (let i = 0; i < this.components.length; i++) {
       this.Top(i);
       this.components[i].topic = this.topics;
@@ -57,25 +59,30 @@ export class ComponentComponent implements OnInit {
   }
   
   Top(i) {
-    this.allTopics = this.getData.getTopic();
     this.topics = [];
     for (let a = 0; a < this.components[i].topic.length; a++) {
       this.Lesson(a,i);
       this.topics.push(this.allTopics[this.idTopic]);
-      
-      //hier loopen om lessenID te vervangen met this.lessons
-      for(let b=0; b<this.topics[a].lessons.length; b++){
-        this.topics[a].lessons[b] = this.lessons[b]
-      }
+      this.topics[a].lessons = this.lessons;
       this.idTopic = this.idTopic + 1;
     }
   }
   Lesson(a,i){
-    this.allLessons = this.getData.getLessons();
     this.lessons = [];
     for(let c=0; c < this.allTopics[this.idTopic].lessons.length; c++){
+      
+      //GOES WRONG, ID LESSONS WORD EEN OBJECT
       this.idLesson = this.allTopics[this.idTopic].lessons[c];
-      this.lessons.push(this.allLessons[this.idLesson])
+      if(typeof(this.idLesson) !== "number"){
+        //this is correct, the idLesson becomes an object after you reroute to myPath.
+        //This calls the correct key of the object
+        this.idLesson = this.idLesson.id;
+        this.lessons.push(this.allLessons[this.idLesson]);
+      }
+      else{
+        this.lessons.push(this.allLessons[this.idLesson]);
+      }
+      
     }
   }
 }
