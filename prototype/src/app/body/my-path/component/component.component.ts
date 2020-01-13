@@ -11,9 +11,9 @@ export class ComponentComponent implements OnInit {
   topics =[];
   lessons = [];
   result = [];
-  components;
-  allTopics;
-  allLessons;
+  components:any = this.getData.getComp();
+  allTopics = this.getData.getTopic();
+  allLessons = this.getData.getLessons();
   length;
   idTopic = 0;
   idLesson:any = 0;
@@ -23,9 +23,6 @@ export class ComponentComponent implements OnInit {
   
   constructor(private getData: GetDataService) {}
   ngOnInit() {
-    this.components = this.getData.getComp();
-    this.allTopics = this.getData.getTopic();
-    this.allLessons = this.getData.getLessons();
     this.Comp();
   }
   showLessons(id) {
@@ -73,6 +70,8 @@ export class ComponentComponent implements OnInit {
       
       //GOES WRONG, ID LESSONS WORD EEN OBJECT
       this.idLesson = this.allTopics[this.idTopic].lessons[c];
+
+
       if(typeof(this.idLesson) !== "number"){
         //this is correct, the idLesson becomes an object after you reroute to myPath.
         //This calls the correct key of the object

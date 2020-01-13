@@ -1,1 +1,43 @@
-<p>quiz works!</p>
+<mat-card class="page mat-elevation-z12">
+    
+    <!-- The top of the card -->
+    <div class="top">
+        <h1>Quiz</h1>
+        <div routerLink="/myPath" class="cancel">X</div>
+    </div>
+    
+    <!-- Main body of the card -->
+    <div class="body">
+        <div class="question"><b>{{question | uppercase }}</b></div>
+        <div class="awnserBox">
+            <ul class="myclass">
+                <!-- <label for="awnser1"><li class="pretty p-default"><input type="checkbox" id="awnser1"><div class="state">some text</div></li></label> -->
+                <label for="awnser2"><li><input type="checkbox" id="awnser2">some text</li></label>
+                <label for="awnser3"><li><input type="checkbox" id="awnser3">some text</li></label>
+                <label for="awnser4"><li><input type="checkbox" id="awnser4">some text</li></label>
+
+                <div class="pretty p-image p-plain p-round">
+                    <input type="checkbox" class="awnser1" />
+                    <div class="state">
+                        <img class="image" src="../../../../../../assets/LiPic.png">
+                        <label for="awnser1">Agree</label>
+                    </div>
+                </div>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- The bottom of the card -->
+    <div class="bottom">
+
+        <!-- Next Page -->
+        <button class="button" mat-fab (click)="previousPage()" style="background-color: rgb(0, 153, 255);"> < </button>
+
+        <!-- Progress bar -->
+        <mat-progress-bar class="centerBar" [value]=50></mat-progress-bar>
+
+        <!-- previous page -->
+        <button class="button" mat-fab (click)="nextPage()" style="background-color: rgb(0, 153, 255);"> > </button>
+    </div>
+</mat-card>

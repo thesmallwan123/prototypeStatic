@@ -20,7 +20,6 @@ export class TopicComponent implements OnInit {
     this.getTopic();
   }
   getTopic(){
-    // if you want to be more clever...
     this.topics = this.GetData.getTopic();
     this.components = this.GetData.getComp();
     this.result = this.topics.filter(o1 => this.components.some(o2 => o1.componentID === o2.id));

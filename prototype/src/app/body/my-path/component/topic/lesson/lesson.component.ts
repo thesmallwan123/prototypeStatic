@@ -22,6 +22,9 @@ export class LessonComponent implements OnInit {
   pageID = 0;
   percDoneLesson = 0;
   allPerc = [];
+  endPage = true;
+  allTopic;
+  topicRow;
   ngOnInit() { 
     this.getlesson();
   }
@@ -47,39 +50,58 @@ export class LessonComponent implements OnInit {
     for(let i =0; i<this.mustHavePages.length;i++){
       this.page = this.allPages[this.mustHavePages[this.pageID]]
       this.allPerc.push(this.allPages[this.mustHavePages[i]])
+      this.calcPerc();
     }
-    this.calcPerc();
+    if(this.page.id == 29){
+      this.percDoneLesson = 100;
+      this.endPage = true
+    }
   }
-
-// Go to next page
+  
+  // Go to next page
   nextPage(){
     this.getData.setPages(this.allPages[this.mustHavePages[this.pageID]]);
     this.calcPerc();
-    // console.log(this.percDoneLesson)
-
+    
     this.pageID = this.pageID + 1;
     const lastItem = this.mustHavePages.length -1;
     if(this.pageID > lastItem){
-      this.showLessonCompletion();
+      return this.goQuiz();
     }
     this.getPages();
   }
-
-//Go to Previous page
+  
+  //Go to Previous page
   previousPage(){
     this.pageID = this.pageID - 1;
     this.getPages();
   }
-
-//shows the page that you will be directed to next lesson
-  showLessonCompletion(){
-    this.nextLesson();
-  }
-
+  
 // Redirect to new lesson
-  nextLesson(){
-      this.id = this.id +1;
-      window.location.href = "http://localhost:4200/lesson/"+this.id;
+  goQuiz(){
+    this.endPage=false;
+    this.findTopic();
   }
+  
+  findTopic(){
+    this.allTopic = this.getData.getTopic();
+    for(let i =0;i<this.allTopic.length;i++){
+      this.topicRow = this.myFunction(i);
+      console.log(this.topicRow)
+      if(this.topicRow == 0){
+        window.location.href = "http://localhost:4200/quiz/"+this.topicRow;
+      }
+    }
+  }
+  myFunction(i) {
+    const id = this.lesson.id;
+    const topID = this.allTopic[i].lessons.findIndex(checkRow);    
+    function checkRow(row) {
+      return row === id;
+    }
 
+
+    return topID;
+  }
+  
 }

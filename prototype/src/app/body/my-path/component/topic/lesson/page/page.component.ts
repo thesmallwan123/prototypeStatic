@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { GetDataService } from '../../../../../../services/get-data.service';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-page',
@@ -6,13 +8,51 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./page.component.scss']
 })
 export class PageComponent implements OnInit {
-  txt1 = "So, you might be here because you are wondering what is meant by this buzzword DevOps. To give you a definition, DevOps is “… a culture shift designed to improve quality of solutions that are business-oriented and rapidly evolving and can be easily molded to today’s needs"
-  txt2 = "DevOps is “… a culture shift designed to improve quality of solutions that are business-oriented and rapidly evolving and can be easily molded to today’s needs"
-  giffy = "../../../../../../assets/gifs/component3/lesson60/1.1.gif"
-  constructor() { }
+  constructor(
+    private Getdata: GetDataService,
+    private route: ActivatedRoute
+  ) { }
+  title = "Lesson Completed!";
+  txt = [
+    "You are only ", 
+    " more lesson(s) and a quiz away from your ",
+    " badge"
+  ];
+  lessonsLeft;
+  components;
+  components2;
+  topics;
+
+  pageId = this.route.snapshot.paramMap.get('id');
+  lessonId;
+  topicId;
+  componentId;
+
+
+  allLesson;
+  allTopics = this.Getdata.getTopic();
+  allComponents = this.Getdata.getComp();
+
+  finalText:any = "";
 
   ngOnInit() {
-    
+    this.calcLessonsLeft();
+    this.initText();
   }
 
+  calcLessonsLeft(){
+    this.components = this.Getdata.getComp();
+    this.components = this.components[3];
+    this.topics = this.components.topic.length;
+    return this.lessonsLeft = this.topics;
+  }
+
+  initText(){
+    for(let i =0; i<this.txt.length;i++){
+      this.finalText = this.finalText + this.txt[i];
+      if(i == 0){
+        this.finalText = this.finalText + this.lessonsLeft;
+      }
+    }
+  }
 }

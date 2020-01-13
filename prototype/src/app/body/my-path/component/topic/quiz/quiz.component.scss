@@ -1,0 +1,86 @@
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+.page{
+    font-family: KLMNoa;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 15%;
+    padding: 0px !important;
+    .top{
+        width: 100%;    
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        .lessonTitle{
+            position: relative;
+            font-size:30px;
+            padding-top: 23.433px;
+            margin-left: 10px;
+        }
+        .cancel{
+            position: absolute;
+            right: 23.433px;
+            top: 23.433px;
+            font-size: 40px;
+        }
+    }
+    .body{
+        display: flex;
+        flex-direction: column;
+        padding: 18px;
+        justify-content: center;
+        .question{
+            font-size: 30px;
+            width: 40%;
+            text-align: left;
+            display: flex;
+            margin-top: 40px;
+            margin-left: 20%;
+            margin-bottom: 40px;
+            // background-color: red;
+        }
+        .awnserBox{
+            font-size: 20px;
+            width: 40%;
+            text-align: left;
+            display: flex;
+            margin-left: 30%;
+            margin-bottom: 40px;
+            // background-color: blue;
+            .myclass{
+                list-style: none;
+                .pretty{
+                    .state{
+                        .image{
+                            width: 40%;
+                            height: 110%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .bottom{
+        min-width: 100%;
+        display: flex;
+        flex-direction: row;
+        .centerBar{
+            width: 100%;
+            border-radius: 20px;
+            height: 30px;
+            margin-top: 4%;
+        }
+        .button{
+            height: fit-content;
+            width: 5%;
+            margin: 30px;
+            background-color:rgb(0, 153, 255);
+            font-size: 60px;
+            color: white;
+        }
+    }
+}

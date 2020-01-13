@@ -30,26 +30,30 @@
     .body{
         display: flex;
         padding: 18px;
-        .left{
+        justify-content: center;
+        .endPageOrNot{
             display: flex;
-            flex-direction: column;
-            min-width: 50%;
-            padding: 20px;
-            
-            .p{
-                padding: 0px;
-                font-size: 18px;
+            .left{
+                display: flex;
+                flex-direction: column;
+                min-width: 50%;
+                padding: 20px;
+                
+                .p{
+                    padding: 0px;
+                    font-size: 18px;
+                }
             }
-        }
-        .right{
-            min-width: 50%;
-            max-height: 500px;
-            justify-content: center;
-            display: flex;
-            .giphy{
-                min-width: 0px;
-                max-height: 300px;
-            }
+            .right{
+                min-width: 50%;
+                max-height: 500px;
+                justify-content: center;
+                display: flex;
+                .giphy{
+                    min-width: 0px;
+                    max-height: 300px;
+                }
+            }   
         }
     }
     .bottom{
