@@ -26,8 +26,16 @@ $prototype-theme: mat-light-theme($prototype-primary, $prototype-accent, $protot
 // that you are using.
 @include angular-material-theme($prototype-theme);
 @font-face {
-    font-family: 'KLMNoa';
+    font-family: 'KLMNoaReg';
     src: url("./assets/font/KLMNoa-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: 'KLMNoaBold';
+    src: url("./assets/font/KLMNoa-Bold.otf") format("opentype");
+}
+@font-face {
+    font-family: 'KLMNoaThin';
+    src: url("./assets/font/KLMNoa-Light.otf") format("opentype");
 }
 
 /* You can add global styles to this file, and also import other style files */
@@ -40,5 +48,5 @@ body{
 html, body { 
     height: 100%;
     margin: 0; 
-    font-family: 'KLMNoa';
+    font-family: 'KLMNoaThin';
 }
