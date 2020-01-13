@@ -47,13 +47,11 @@
     <!-- The bottom of the card -->
     <div class="bottom">
 
-        <!-- Next Page -->
-        <button class="button" mat-fab (click)="previousPage()" style="background-color: rgb(0, 153, 255);"> < </button>
-
         <!-- Progress bar -->
         <mat-progress-bar class="centerBar" [value]=50></mat-progress-bar>
+        
+        <!-- Next Page -->
+        <button class="button" (click)="nextQuetsion()"> CHECK </button>
 
-        <!-- previous page -->
-        <button class="button" mat-fab (click)="nextPage()" style="background-color: rgb(0, 153, 255);"> > </button>
-    </div>
+        </div>
 </mat-card>
