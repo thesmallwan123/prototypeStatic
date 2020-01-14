@@ -20,18 +20,9 @@ export class PageComponent implements OnInit {
   ];
   lessonsLeft;
   components;
-  components2;
   topics;
 
-  pageId = this.route.snapshot.paramMap.get('id');
-  lessonId;
-  topicId;
-  componentId;
 
-
-  allLesson;
-  allTopics = this.Getdata.getTopic();
-  allComponents = this.Getdata.getComp();
 
   finalText:any = "";
 

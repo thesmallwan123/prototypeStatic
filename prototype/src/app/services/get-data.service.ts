@@ -14,27 +14,104 @@ export class GetDataService {
     {id: 6, done:0, topic:[13,14,15,16], title: "Security", description: "Here you find all the topics."},
     {id: 7, done:0, topic:[17,18,19], title: "IT Service Management", description: "Here you find all the topics."}
     ]
-
+  
+  quizes: Object = [
+    {id: 1, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+    {id: 2, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 3, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 4, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 5, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 6, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 7, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 8, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 9, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 10, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+      
+    {id: 11, done: 0, questions:[
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      ]},
+    ]
   topics: Object = [
-    {id: 1, done: 0, lessons:[1], badgeID: 1, title: "Scrum", description: "How we work according to the Scrum framework"},
-    {id: 2, done: 0, lessons:[1], badgeID: 1, title: "SAFe", description: "How our Agile practises are scaled in a common framework"},
-    {id: 3, done: 0, lessons:[1], badgeID: 1, title: "Digital Agile Release Planes", description: "An overview of the diffrent Digital Agile Release Planes"},
-    {id: 4, done: 0, lessons:[1], badgeID: 2, title: "Front-end and back-end", description: "The diffrence between front-ends and back-ends"},
-    {id: 5, done: 0, lessons:[1], badgeID: 2, title: "AFKL's digitals produts", description: "And overview of all the digital B2C products of AFKL"},
-    {id: 6, done: 0, lessons:[1], badgeID: 3, title: "IT Departement", description: "Get to know the four IT departements of AFKL"},
-    {id: 7, done: 0, lessons:[1], badgeID: 3, title: "E-Commerce", description: "learn about the E-Commerce departement and its groups"},
-    {id: 8, done: 0, lessons:[1], badgeID: 4, title: "Development Process", description: "The diffrent stages of the software development process"},
-    {id: 9, done: 0, lessons:[60, 61, 62, 63, 64, 65], badgeID: 4, title: "DevOps", description: "The integration of development and operations in one process"},
-    {id: 10, done: 0, lessons:[1], badgeID: 4, title: "Self Service", description: "AFKL's Self Servies as a wat to implement DevOps"},
-    {id: 11, done: 0, lessons:[1], badgeID: 4, title: "Delivery Pipeline", description: "How to delivery of software has been automated in one pipeline"},
-    {id: 12, done: 0, lessons:[1], badgeID: 5, title: "Architecture Overview", description: "Overview of the architecture of AFKL's Digital applications"},
-    {id: 13, done: 0, lessons:[1], badgeID: 6, title: "IT Security", description: "get to know the diffrent kinds of IT security"},
-    {id: 14, done: 0, lessons:[1], badgeID: 6, title: "Application Security Planning", description: "Application sucurity scans and AFKL;s Self Service Security Scan"},
-    {id: 15, done: 0, lessons:[1], badgeID: 6, title: "Datacenter vs. Cloud", description: "Security related to hosting at a datacenter versus the cloud"},
-    {id: 16, done: 0, lessons:[1], badgeID: 6, title: "PCI Compliancy", description: "How to deal with passenger information"},
-    {id: 17, done: 0, lessons:[1], badgeID: 7, title: "Process", description: "The diffrent IT Service Management processes"},
-    {id: 18, done: 0, lessons:[1], badgeID: 7, title: "Change Managment at AFKL", description: "How change management is practised at AFKL"},
-    {id: 19, done: 0, lessons:[1], badgeID: 7, title: "Incident Management at AFKL", description: "How incident management is practised at AFKL"},
+    {id: 1, done: 0, lessons:[1], quizID: 1, badgeID: 1, title: "Scrum", description: "How we work according to the Scrum framework"},
+    {id: 2, done: 0, lessons:[1], quizID: 2, badgeID: 2, title: "SAFe", description: "How our Agile practises are scaled in a common framework"},
+    {id: 3, done: 0, lessons:[1], quizID: 3, badgeID: 3, title: "Digital Agile Release Planes", description: "An overview of the diffrent Digital Agile Release Planes"},
+    {id: 4, done: 0, lessons:[1], quizID: 4, badgeID: 4, title: "Front-end and back-end", description: "The diffrence between front-ends and back-ends"},
+    {id: 5, done: 0, lessons:[1], quizID: 5, badgeID: 5, title: "AFKL's digitals produts", description: "And overview of all the digital B2C products of AFKL"},
+    {id: 6, done: 0, lessons:[1], quizID: 6, badgeID: 6, title: "IT Departement", description: "Get to know the four IT departements of AFKL"},
+    {id: 7, done: 0, lessons:[1], quizID: 7, badgeID: 7, title: "E-Commerce", description: "learn about the E-Commerce departement and its groups"},
+    {id: 8, done: 0, lessons:[1], quizID: 8, badgeID: 8, title: "Development Process", description: "The diffrent stages of the software development process"},
+    {id: 9, done: 0, lessons:[60, 61, 62, 63, 64, 65], quizID: 9, badgeID: 9, title: "DevOps", description: "The integration of development and operations in one process"},
+    {id: 10, done: 0, lessons:[1], quizID: 10, badgeID: 10, title: "Self Service", description: "AFKL's Self Servies as a wat to implement DevOps"},
+    {id: 11, done: 0, lessons:[1], quizID: 11, badgeID: 11, title: "Delivery Pipeline", description: "How to delivery of software has been automated in one pipeline"},
+    {id: 12, done: 0, lessons:[1], quizID: 12, badgeID: 12, title: "Architecture Overview", description: "Overview of the architecture of AFKL's Digital applications"},
+    {id: 13, done: 0, lessons:[1], quizID: 13, badgeID: 13, title: "IT Security", description: "get to know the diffrent kinds of IT security"},
+    {id: 14, done: 0, lessons:[1], quizID: 14, badgeID: 14, title: "Application Security Planning", description: "Application sucurity scans and AFKL;s Self Service Security Scan"},
+    {id: 15, done: 0, lessons:[1], quizID: 15, badgeID: 15, title: "Datacenter vs. Cloud", description: "Security related to hosting at a datacenter versus the cloud"},
+    {id: 16, done: 0, lessons:[1], quizID: 16, badgeID: 16, title: "PCI Compliancy", description: "How to deal with passenger information"},
+    {id: 17, done: 0, lessons:[1], quizID: 17, badgeID: 17, title: "Process", description: "The diffrent IT Service Management processes"},
+    {id: 18, done: 0, lessons:[1], quizID: 18, badgeID: 18, title: "Change Managment at AFKL", description: "How change management is practised at AFKL"},
+    {id: 19, done: 0, lessons:[1], quizID: 19, badgeID: 19, title: "Incident Management at AFKL", description: "How incident management is practised at AFKL"},
     ]
   
   lessons: Object = [
@@ -464,21 +541,14 @@ export class GetDataService {
     return pages;
   }
 
+  getQuiz(){
+    const quiz = this.quizes;
+    return quiz;
+  }
 
-  setComp(row){
-    this.components[row.id] = 100
-  }
-  setTopic(row){
-    this.topics[row.id] = 100;
-    
-  }
-  setLessons(row){
-  }
   setPages(row){
     this.pages[row.id].done = 100;
-    this.setLessons(row);
   }
-  
 
   calcPercentage(allAchievedOrNot){
     var amount = 0;

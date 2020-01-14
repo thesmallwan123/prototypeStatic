@@ -38,6 +38,9 @@ $prototype-theme: mat-light-theme($prototype-primary, $prototype-accent, $protot
     src: url("./assets/font/KLMNoa-Light.otf") format("opentype");
 }
 
+// PretyBox
+@import '~pretty-checkbox/src/pretty-checkbox.scss';
+
 /* You can add global styles to this file, and also import other style files */
 body{
     margin:0;

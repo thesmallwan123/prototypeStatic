@@ -10,7 +10,7 @@ import { QuizComponent } from './body/my-path/component/topic/quiz/quiz.componen
 const routes: Routes = [
   {path: 'myPath', component: MyPathComponent},
   {path: 'myNetwork', component: MyNetworkComponent},
-  {path: 'lesson/:id', component: LessonComponent},
+  {path: ':idTop/lesson/:idLesson', component: LessonComponent},
   {path: 'quiz/:id', component: QuizComponent},
   {path: '', redirectTo: '/myPath', pathMatch: 'full'},
   {path: '**', redirectTo: '/myPath'},

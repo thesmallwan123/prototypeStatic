@@ -1,6 +1,6 @@
 @import '~pretty-checkbox/src/pretty-checkbox.scss';
 .page{
-    font-family: KLMNoa;
+    font-family: KLMNoaReg;
     margin-top: 30px;
     margin-bottom: 30px;
     background-color: white;
@@ -34,35 +34,27 @@
         padding: 18px;
         justify-content: center;
         .question{
-            font-size: 30px;
-            width: 40%;
-            text-align: left;
+            font-size: 25px;
+            width: 80%;
+            text-align: center;
             display: flex;
             margin-top: 40px;
-            margin-left: 20%;
-            margin-bottom: 40px;
-            // background-color: red;
+            margin-left: 10%;
         }
         .awnserBox{
             font-size: 20px;
-            width: 40%;
+            width: 60%;
             text-align: left;
             display: flex;
             margin-left: 30%;
-            margin-bottom: 40px;
+            // margin-bottom: 40px;
             // background-color: blue;
             .myclass{
                 list-style: none;
                 display: flex;
                 flex-direction: column;
                 .pretty{
-                    margin-top: 30px;
-                    .state{
-                        label::after{
-                            border: 1px solid rgb(16, 195, 0);
-                            background-color: rgb(200, 200, 200);
-                        }
-                    }
+                    margin-top: 20px;
                 }
             }
         }

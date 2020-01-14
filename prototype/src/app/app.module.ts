@@ -24,6 +24,7 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material';
 import { GetDataService } from './services/get-data.service';
+import { NgxPrettyCheckboxModule } from 'ngx-pretty-checkbox';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { GetDataService } from './services/get-data.service';
     PageComponent,
   ],
   imports: [
+    NgxPrettyCheckboxModule,
     MatDividerModule,
     MatCardModule,
     MatButtonModule,
@@ -49,7 +51,7 @@ import { GetDataService } from './services/get-data.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [GetDataService],
   bootstrap: [AppComponent]

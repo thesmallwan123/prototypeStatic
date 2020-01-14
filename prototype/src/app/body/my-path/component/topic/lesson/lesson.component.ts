@@ -22,28 +22,51 @@ export class LessonComponent implements OnInit {
   pageID = 0;
   percDoneLesson = 0;
   allPerc = [];
-  endPage = true;
-  allTopic;
-  topicRow;
+  endPage = false;
+  allTopic = this.getData.getTopic();
+  currentTopic;
+  topicId;
+  
+  
+  
   ngOnInit() { 
-    this.getlesson();
+    this.topicId = parseInt(this.route.snapshot.paramMap.get('idTop'));
+    this.topicId = this.topicId -1;
+    this.id = parseInt(this.route.snapshot.paramMap.get('idLesson'));
+    this.currentTopic = this.allTopic[this.topicId];
+    this.checkToQuiz();    
   }
-//calculates the % of te lesson
+  checkToQuiz(){
+    var lastItem = this.currentTopic.lessons.length -1;
+    lastItem = this.currentTopic.lessons[lastItem];
+    console.log(lastItem)
+    
+    if(this.id > lastItem){
+      console.log("GoQuiz")
+      this.goQuiz();
+    }
+    else{
+      console.log("LASTITEM "+lastItem )
+      console.log("ID "+this.id)
+      this.getlesson();
+    }
+
+  }
+
+  //calculates the % of te lesson
   calcPerc(){
     this.percDoneLesson = this.getData.calcPercentage(this.allPerc)
   }
-
+  
   // reinitialises all the lessons
   getlesson(): void {
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.id = parseInt(this.id, 10);
-    
+    this.id = parseInt(this.route.snapshot.paramMap.get('idLesson'));
     this.allLessons2 = this.getData.getLessons()
     this.lesson = this.allLessons2[this.id]
     this.getPages();
   }
-
-//Reinitialises the pages, and calculates the new % done of the lesson
+  
+  //Reinitialises the pages, and calculates the new % done of the lesson
   getPages(){
     this.allPerc = [];
     this.mustHavePages = this.allLessons2[this.id].pageID
@@ -66,7 +89,7 @@ export class LessonComponent implements OnInit {
     this.pageID = this.pageID + 1;
     const lastItem = this.mustHavePages.length -1;
     if(this.pageID > lastItem){
-      return this.goQuiz();
+      return this.goNextLesson();
     }
     this.getPages();
   }
@@ -77,31 +100,18 @@ export class LessonComponent implements OnInit {
     this.getPages();
   }
   
-// Redirect to new lesson
-  goQuiz(){
+  // Redirect to new lesson
+  goNextLesson(){
     this.endPage=false;
-    this.findTopic();
+    this.id = this.id +1;
+    this.topicId = this.topicId +1;
+    window.location.href = "http://localhost:4200/"+this.topicId+"/lesson/"+this.id;
   }
   
-  findTopic(){
-    this.allTopic = this.getData.getTopic();
-    for(let i =0;i<this.allTopic.length;i++){
-      this.topicRow = this.myFunction(i);
-      console.log(this.topicRow)
-      if(this.topicRow == 0){
-        window.location.href = "http://localhost:4200/quiz/"+this.topicRow;
-      }
-    }
+  //Redirects to quiz
+  goQuiz(){
+    this.topicId = this.topicId +1;
+    window.location.href = "http://localhost:4200/quiz/"+this.topicId;
   }
-  myFunction(i) {
-    const id = this.lesson.id;
-    const topID = this.allTopic[i].lessons.findIndex(checkRow);    
-    function checkRow(row) {
-      return row === id;
-    }
-
-
-    return topID;
-  }
-  
+      
 }

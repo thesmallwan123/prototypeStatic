@@ -21,7 +21,7 @@
       </div>
     </div>
     <div class="viewLessonHidden" id="viewLesson{{topic.id}}">
-      <div class="lessons" routerLink="/lesson/{{lesson.id}}" *ngFor="let lesson of topic.lessons" id="LESSONS{{topic.id}}">
+      <div class="lessons" routerLink="/{{topic.id}}/lesson/{{lesson.id}}" *ngFor="let lesson of topic.lessons" id="LESSONS{{topic.id}}">
         <div class="circles">
           <div class="lesson mat-elevation-z8">
           </div>
