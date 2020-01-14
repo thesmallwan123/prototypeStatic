@@ -16,8 +16,8 @@ export class LessonComponent implements OnInit {
   allLessons2;
   allPages = this.getData.getPages();
   id
-  page;
-  lesson;
+  page: any =0;
+  lesson: any =0;
   mustHavePages;
   pageID = 0;
   percDoneLesson = 0;

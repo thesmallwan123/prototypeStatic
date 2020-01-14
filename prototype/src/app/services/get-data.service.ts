@@ -86,7 +86,7 @@ export class GetDataService {
       ]},
       
     {id: 11, done: 0, questions:[
-      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"A cashier at the super market"},{id:1, text:"The inside of a computer"},{id:2, text:"The database that stores passenger information"},{id:3, text:"Your PC welcome screen that you have to unlock"}], awnser: [0,3]},
       {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},

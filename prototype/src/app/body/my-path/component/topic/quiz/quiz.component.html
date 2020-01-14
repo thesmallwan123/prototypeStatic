@@ -2,17 +2,17 @@
     
     <!-- The top of the card -->
     <div class="top">
-        <h1>Quiz:</h1> <!-- {{topic.title}} -->
+        <h1 class="lessonTitle">Quiz:</h1> <!-- {{topic.title}} -->
         <div routerLink="/myPath" class="cancel">X</div>
     </div>
     
     <!-- Main body of the card -->
     <div class="body">
-        <div class="question">{{question | uppercase }}</div>
+        <div class="question">{{question}}</div>
         <div class="awnserBox">
             <ul class="myclass">
                 <div *ngFor="let poss of poss" class="pretty p-image p-plain p-round">
-                    <p-checkbox color="dark" stroke="fill" (click)="setAwnser($event, poss.id)">
+                    <p-checkbox id="{{poss.id}}" color="dark" stroke="fill" (click)="setAwnser($event, poss.id)">
                         {{poss.text}}
                     </p-checkbox>
                 </div>
@@ -22,13 +22,14 @@
 
 
     <!-- The bottom of the card -->
-    <div class="bottom">
-
+    <div class="bottom" id="bottom">
+        <div id="hideCorrText" class="corrText">CORRECT</div>
         <!-- Progress bar -->
         <mat-progress-bar class="centerBar" [value]=50></mat-progress-bar>
         
         <!-- Next Page -->
-        <button class="button" (click)="nextQuetsion()"> CHECK </button>
+        <button id="showButt" class="button check" (click)="nextQuetsion()"> CHECK </button>
+        <button id="hideButt" mat-fab mat-button-base class="button next" (click)="endQuiz()"> > </button>
 
-        </div>
+    </div>
 </mat-card>

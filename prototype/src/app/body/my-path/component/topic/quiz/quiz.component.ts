@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { GetDataService } from '../../../../../services/get-data.service';
-import { ActivatedRoute, RouterLink } from '@angular/router';
-import { empty } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -29,6 +28,7 @@ export class QuizComponent implements OnInit {
   poss = this.currentQuiz.questions[this.currentQuestionID].possibilatys;
   allTopics = this.Getdata.getTopic();
   currentTopic;
+  i;
   
   userAwnser=[];
 
@@ -50,11 +50,18 @@ export class QuizComponent implements OnInit {
 
   nextQuetsion(){
     if(this.checkAwnser() == true){
+      document.getElementById("bottom").style.background='#33cc9930';
+      document.getElementById("hideButt").setAttribute("id", "showButt")
+      document.getElementById("showButt").setAttribute("id", "hideButt")
+      document.getElementById("hideCorrText").setAttribute("id", "showCorrText")
+
+
+      //Still need to change the dots to green as well
+
       this.currentQuiz.questions[this.currentQuestionID].done = 100;
-      this.currentQuestionID = this.currentQuestionID + 1;
-      if(this.currentQuiz.questions.length >= this.currentQuestionID){
-        this.endQuiz()
-      }
+    }
+    else{
+      document.getElementById("bottom").style.background='rgba(255, 0, 0, 0.1)'; 
     }
   }
   
