@@ -32,7 +32,7 @@ export class QuizComponent implements OnInit {
   currentTopic = this.allTopics[this.topicId];
   awnsered = 0;
   userAwnser=[];
-
+  i;
 
   ngOnInit() {
   }
@@ -57,72 +57,51 @@ export class QuizComponent implements OnInit {
 
   showButton(){
     if(this.checkAwnser() == true){
-      this.awnsered = this.awnsered +1;
-      if(this.questionType == 0){
-        //Still need to change the dots to green as well
-        document.getElementById("bottom").style.background='#33cc9930';
-        document.getElementById("hideButt").setAttribute("id", "showButt")
-        document.getElementById("showButt").setAttribute("id", "hideButt")
-        document.getElementById("hideCorrText").setAttribute("id", "showCorrText")
-        
-        
-        this.currentQuiz.questions[this.questionID].done = 100;
-      }
-      if(this.questionType == 1){
-        if(this.awnsered == 2){
-          if(this.checkAwnser() == true){
-            document.getElementById("bottom").style.background='#33cc9930';
-            document.getElementById("hideButt").setAttribute("id", "showButt")
-            document.getElementById("showButt").setAttribute("id", "hideButt")
-            document.getElementById("hideCorrText").setAttribute("id", "showCorrText")
-
-            this.currentQuiz.questions[this.questionID].done = 100;
-          }
-        }
-      }
+      //Still need to change the dots to green as well
+      document.getElementById("bottom").style.background='#33cc9930';
+      document.getElementById("hideButt").setAttribute("id", "showButt")
+      document.getElementById("showButt").setAttribute("id", "hideButt")
+      document.getElementById("hideCorrText").setAttribute("id", "showCorrText")
+      
+      
+      this.currentQuiz.questions[this.questionID].done = 100;
     }
     else{
+      for(this.i=0;this.i<this.currentQuiz.questions[this.questionID].correctAwnser.length; this.i++){
+        if(document.getElementById("1").style.backgroundColor !== "rgba(51,204,153)"){
+          console.log(this.i)
+        }
+      }
+      document.getElementById("1").style.color = "rgba(255, 0, 0))"
       document.getElementById("bottom").style.background='rgba(255, 0, 0, 0.1)'; 
     }
   }
   
+  checkOpenQuestionFirst(){
+    if(this.questionType == 1){
+      this.awnsered = this.awnsered + 1;
+      if(this.awnsered == 2){
+        this.showButton();
+      }
+    }
+  }
+
   checkAwnser(){
     this.userAwnser.sort()
-    if(this.questionType === 0){
       // Check if the arrays are the same length
-      if (this.userAwnser.length !== this.currentQuiz.questions[this.questionID].awnser.length){
+      if (this.userAwnser.length !== this.currentQuiz.questions[this.questionID].correctAwnser.length){
         console.log("Wrong length"); 
         return false
       }
       else{
         // Check if all items exist and are in the same order
         for (var i = 0; i < this.userAwnser.length; i++) {
-          if (this.userAwnser[i] !== this.currentQuiz.questions[this.questionID].awnser[i]){
+          if (this.userAwnser[i] !== this.currentQuiz.questions[this.questionID].correctAwnser[i]){
             console.log("Wrong order"); 
             return false;
           }
         }
       }
-    }
-    if(this.questionType === 1){
-      if(this.awnsered == 2){
-        console.log(this.currentQuiz.questions[this.questionID].correctAwnser.length)
-        console.log(this.userAwnser.length)
-        if (this.userAwnser.length !== this.currentQuiz.questions[this.questionID].awnser.length){
-          console.log("Wrong length"); 
-          return false
-        }
-        else{
-          // Check if all items exist and are in the same order
-          for (var i = 0; i < this.userAwnser.length; i++) {
-            if (this.userAwnser[i] !== this.currentQuiz.questions[this.questionID].awnser[i]){
-              console.log("Wrong order"); 
-              return false;
-            }
-          }
-        }
-      }
-    }
     // Otherwise, return true
     return true;
   }
@@ -132,7 +111,8 @@ export class QuizComponent implements OnInit {
       this.currentQuizID = this.currentQuizID + 1;/*Because we do -1 in the init to get the correct quiz*/
       this.questionID = this.questionID +1;
       window.location.href = "http://localhost:4200/quiz/"+this.currentQuizID+"/"+this.questionID;
-    }else{
+    }
+    else{
       this.topicId = this.topicId +1;
       var lessonID = this.allTopics[this.topicId].lessons[0];
       return window.location.href = "http://localhost:4200/"+this.topicId+"/lesson/"+lessonID;
