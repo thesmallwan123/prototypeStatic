@@ -2,15 +2,15 @@
     
     <!-- The top of the card -->
     <div class="top">
-        <h1 class="lessonTitle">Quiz:</h1> <!-- {{topic.title}} -->
+        <h1 class="lessonTitle">Quiz: {{currentTopic.title}}</h1> <!-- {{topic.title}} -->
         <div routerLink="/myPath" class="cancel">X</div>
     </div>
     
     <!-- Main body of the card -->
-    <div class="body">
-        <div class="question">{{question}}</div>
-        <div class="awnserBox">
-            <ul class="myclass">
+    <div class="body" *ngIf="isLoading">
+        <div class="awnserBoxMultipleChoise" *ngIf="questionType == '0'">
+            <div class="questionMultipleChoise">{{question}}</div>
+            <ul class="possibilatys">
                 <div *ngFor="let poss of poss" class="pretty p-image p-plain p-round">
                     <p-checkbox id="{{poss.id}}" color="dark" stroke="fill" (click)="setAwnser($event, poss.id)">
                         {{poss.text}}
@@ -18,6 +18,30 @@
                 </div>
             </ul>
         </div>
+
+
+
+
+
+
+        <div class="awnserBoxOpenQuestion" *ngIf="questionType == '1'">
+            <div class="userSideOfCard">
+                <div class="questionOpenQuestion">{{question}}</div>
+                <textarea type="text" name="awnserOpenQuestion" class="awnserOpenQuestion" placeholder="Type your awnser here"></textarea>
+            </div>
+            <div class="awnserSideOfCard" *ngIf="awnsered">
+                <div class="awnserTitle">Correct Awnser (click what you have correct):</div>
+                <div class="awnser">
+                    <button (click)="setAwnser($event, awnser.id)" id="{{awnser.id}}" class="textRow Button{{awnser.button}}" *ngFor="let awnser of awnsers">{{awnser.txt}}</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
     </div>
 
 
@@ -28,7 +52,7 @@
         <mat-progress-bar class="centerBar" [value]=50></mat-progress-bar>
         
         <!-- Next Page -->
-        <button id="showButt" class="button check" (click)="nextQuetsion()"> CHECK </button>
+        <button id="showButt" class="button check" (click)="showButton()"> CHECK </button>
         <button id="hideButt" mat-fab mat-button-base class="button next" (click)="endQuiz()"> > </button>
 
     </div>

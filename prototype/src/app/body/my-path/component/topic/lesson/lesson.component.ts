@@ -111,7 +111,7 @@ export class LessonComponent implements OnInit {
   //Redirects to quiz
   goQuiz(){
     this.topicId = this.topicId +1;
-    window.location.href = "http://localhost:4200/quiz/"+this.topicId;
+    window.location.href = "http://localhost:4200/quiz/"+this.topicId +"/"+0;
   }
       
 }

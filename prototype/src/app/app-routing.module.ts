@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: 'myPath', component: MyPathComponent},
   {path: 'myNetwork', component: MyNetworkComponent},
   {path: ':idTop/lesson/:idLesson', component: LessonComponent},
-  {path: 'quiz/:id', component: QuizComponent},
+  {path: 'quiz/:idQuiz/:idQuestion', component: QuizComponent},
   {path: '', redirectTo: '/myPath', pathMatch: 'full'},
   {path: '**', redirectTo: '/myPath'},
 

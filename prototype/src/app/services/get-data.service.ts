@@ -18,78 +18,78 @@ export class GetDataService {
   quizes: Object = [
     {id: 1, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
     {id: 2, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 3, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 4, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 5, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 6, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 7, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 8, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 9, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", correctAwnser:[1,3,5,7], awnser: [{id: 0, button: false, txt:"The term “front-end” refers to the "},{id: 1, button: true, txt:"user interface"},{id: 2, button: false, txt:", while “back-end” means the "},{id: 3, button: true, txt:"server"},{id: 4, button: false, txt:", "},{id: 5, button: true, txt:"application"},{id: 6, button: false, txt:", "},{id: 7, button: true, txt:"database"},{id: 8, button: false, txt:"and that work behind the scenes to deliver information to the user."}]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 10, done: 0, questions:[
       {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
       
     {id: 11, done: 0, questions:[
-      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"A cashier at the super market"},{id:1, text:"The inside of a computer"},{id:2, text:"The database that stores passenger information"},{id:3, text:"Your PC welcome screen that you have to unlock"}], awnser: [0,3]},
-      {id: 2, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 3, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
-      {id: 4, type:0, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 1, type:0, done: 0, question: "Which of the following are Front-ends?", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 2, type:1, done: 0, question: "Discribe the difference between front-end and back-end", possibilatys:[{id:0, text:"Awnser 1"},{id:1, text:"Awnser 2"},{id:2, text:"Awnser 3"},{id:3, text:"Awnser 4"}], awnser: [0,3]},
+      {id: 3, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
+      {id: 4, type:1, done: 0, question: "Which of the following are Front-ends?", awnser: [0,3]},
       ]},
     ]
   topics: Object = [
@@ -475,8 +475,8 @@ export class GetDataService {
         id: 28,
         done: 0,
         text: [
-          "TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest ",
-          "TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest TESTtest "
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam consectetur mattis nisl mollis semper. Maecenas volutpat ornare sem, sed fermentum purus vulputate at. Phasellus tellus erat, ullamcorper vel facilisis maximus, lacinia vel neque. Aliquam erat volutpat. Nam ultrices magna quis ex imperdiet, sit amet consectetur elit rhoncus. Nulla lobortis faucibus diam nec iaculis. Donec mattis euismod finibus. Fusce rutrum suscipit malesuada. Aliquam tincidunt sollicitudin augue tempus euismod.  ",
+          "Maecenas nec consectetur turpis. Praesent elementum justo ac ante ullamcorper, non rutrum erat pharetra. Phasellus vel odio varius elit dignissim dictum. Suspendisse sagittis mi vitae luctus consequat. Suspendisse volutpat luctus ex, sed fermentum velit mattis vel. Proin mollis justo sit amet ligula elementum, sed congue nisl lacinia. Phasellus vitae eleifend neque. Quisque ultrices finibus viverra. Mauris tortor erat, imperdiet sed porttitor at, suscipit vel quam. Morbi dictum auctor ipsum. Duis quis nulla sem. Vestibulum commodo enim sed rhoncus tristique. In hac habitasse platea dictumst. "
         ],
         asset: 'NONE'
       },

@@ -32,29 +32,89 @@
         display: flex;
         flex-direction: column;
         padding: 18px;
-        justify-content: center;
-        .question{
-            font-size: 25px;
-            width: 80%;
-            text-align: center;
-            display: flex;
-            margin-top: 40px;
-            margin-left: 10%;
-        }
-        .awnserBox{
+        .awnserBoxMultipleChoise{
             font-size: 20px;
-            width: 60%;
+            width: 100%;
             text-align: left;
             display: flex;
-            margin-left: 30%;
-            // margin-bottom: 40px;
-            // background-color: blue;
-            .myclass{
+            flex-direction: column;   
+            margin-left: 10%;
+            .questionMultipleChoise{
+                font-size: 25px;
+                width: 50%;
+                text-align: center;
+                display: flex;
+                margin-top: 40px;
+                margin-left: 10%;
+            }
+            .possibilatys{
+                margin-top: 20px;
+                margin-left: 20%;
+                // background-color: blue;
                 list-style: none;
                 display: flex;
                 flex-direction: column;
+                width: 50%;
                 .pretty{
                     margin-top: 20px;
+                }
+            }
+        }
+        .awnserBoxOpenQuestion{
+            // background-color: red;
+            font-size: 20px;
+            width: 100%;
+            text-align: left;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            .userSideOfCard{
+                min-width: 45%;
+                max-width: 45%;
+                min-height: 50px;
+                .awnserOpenQuestion{
+                    background-color: #f1f1f1;
+                    min-height: 100px;
+                    min-width: 85%;
+                    padding: 30px;
+                    margin-top: 20px;
+                    border-radius: 20px;
+                    border: 0px;
+                    color: rgb(110, 110, 110);
+                    resize: none;
+                    font-size: large;
+                }
+            }
+            .awnserSideOfCard{
+                min-width: 45%;
+                max-width: 45%;
+                .awnserTitle{
+                    min-height: 50px;
+                }
+                .awnser{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    margin-top: 20px;
+                    line-height: 60px;
+                    .textRow{
+                        text-align: left;
+                        display: flex;
+                        padding: 0px;
+                        margin: 0px;
+                        border: none;
+                        background-color: transparent;
+                        font-size: 16px;
+                    }
+                    .Buttontrue{
+                        margin-left: 5px;
+                        margin-right: 5px;
+                        background-color: #e6e4e4;
+                        padding: 3px;
+                        padding-left: 10px;
+                        padding-right: 10px;
+                        border-radius: 15px;
+                    }
                 }
             }
         }
