@@ -32,9 +32,11 @@ export class QuizComponent implements OnInit {
   currentTopic = this.allTopics[this.topicId];
   awnsered = 0;
   userAwnser=[];
+  Perc: number = 0;
   i;
 
   ngOnInit() {
+    this.calcPerc();
   }
   ngAfterviewInit(){
     this.isLoading = false;
@@ -129,5 +131,9 @@ export class QuizComponent implements OnInit {
         return this.questionType = 2;
       break;
     }
+  }
+
+  calcPerc(){
+    return this.Perc = this.Getdata.calcPercentage(this.currentQuiz.questions);
   }
 }
