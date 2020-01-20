@@ -29,7 +29,7 @@ export class QuizComponent implements OnInit {
   awnsers = this.currentQuiz.questions[this.questionID].awnser;
   questionType = this.checkQuestionType();
   poss = this.currentQuiz.questions[this.questionID].possibilatys;
-  currentTopic = this.allTopics[this.topicId];
+  currentTopic = this.allTopics[this.currentQuizID];
   awnsered = 0;
   userAwnser=[];
   Perc: number = 0;
