@@ -69,7 +69,6 @@ export class QuizComponent implements OnInit {
     else{
       for(this.i=0;this.i<this.currentQuiz.questions[this.questionID].correctAwnser.length; this.i++){
         if(document.getElementById("1").style.backgroundColor !== "rgba(51,204,153)"){
-          console.log(this.i)
         }
       }
       document.getElementById("1").style.color = "rgba(255, 0, 0))"
@@ -90,14 +89,12 @@ export class QuizComponent implements OnInit {
     this.userAwnser.sort()
       // Check if the arrays are the same length
       if (this.userAwnser.length !== this.currentQuiz.questions[this.questionID].correctAwnser.length){
-        console.log("Wrong length"); 
         return false
       }
       else{
         // Check if all items exist and are in the same order
         for (var i = 0; i < this.userAwnser.length; i++) {
           if (this.userAwnser[i] !== this.currentQuiz.questions[this.questionID].correctAwnser[i]){
-            console.log("Wrong order"); 
             return false;
           }
         }
@@ -107,9 +104,9 @@ export class QuizComponent implements OnInit {
   }
 
   endQuiz(){
+    this.questionID = this.questionID +1;
     if(this.questionID < this.currentQuiz.questions.length){
       this.currentQuizID = this.currentQuizID + 1;/*Because we do -1 in the init to get the correct quiz*/
-      this.questionID = this.questionID +1;
       window.location.href = "http://localhost:4200/quiz/"+this.currentQuizID+"/"+this.questionID;
     }
     else{

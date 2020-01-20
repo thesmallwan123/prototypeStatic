@@ -39,20 +39,16 @@ export class LessonComponent implements OnInit {
   checkToQuiz(){
     var lastItem = this.currentTopic.lessons.length -1;
     lastItem = this.currentTopic.lessons[lastItem];
-    console.log(lastItem)
     
     if(this.id > lastItem){
-      console.log("GoQuiz")
       this.goQuiz();
     }
     else{
-      console.log("LASTITEM "+lastItem )
-      console.log("ID "+this.id)
       this.getlesson();
     }
-
+    
   }
-
+  
   //calculates the % of te lesson
   calcPerc(){
     this.percDoneLesson = this.getData.calcPercentage(this.allPerc)
@@ -71,6 +67,7 @@ export class LessonComponent implements OnInit {
     this.allPerc = [];
     this.mustHavePages = this.allLessons2[this.id].pageID
     for(let i =0; i<this.mustHavePages.length;i++){
+
       this.page = this.allPages[this.mustHavePages[this.pageID]]
       this.allPerc.push(this.allPages[this.mustHavePages[i]])
       this.calcPerc();

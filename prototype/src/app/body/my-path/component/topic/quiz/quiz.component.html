@@ -48,13 +48,14 @@
     <!-- The bottom of the card -->
     <div class="bottom" id="bottom">
         <div id="hideCorrText" class="corrText">CORRECT</div>
+        <!-- <div id="hideWrongText" class="corrText">WRONG</div> -->
         <!-- Progress bar -->
         <mat-progress-bar class="centerBar" [value]=50></mat-progress-bar>
         
         <!-- Next Page -->
-        <button *ngIf="questionType == '0'" id="showButt" class="button check" (click)="showButton()"> CHECK </button>
-        <button *ngIf="questionType == '1'" id="showButt" class="button check" (click)="checkOpenQuestionFirst()"> CHECK </button>
-        <button id="hideButt" mat-fab mat-button-base class="button next" (click)="endQuiz()"> > </button>
+        <button *ngIf="questionType == '0'" id="showButt" class="bottomButton check" (click)="showButton()"> CHECK </button>
+        <button *ngIf="questionType == '1'" id="showButt" class="bottomButton check" (click)="checkOpenQuestionFirst()"> CHECK </button>
+        <button id="hideButt" mat-fab mat-button-base class="bottomButton next" (click)="endQuiz()"> > </button>
 
     </div>
 </mat-card>
