@@ -24,6 +24,8 @@
       <div class="lessons" routerLink="/{{topic.id}}/lesson/{{lesson.id}}" *ngFor="let lesson of topic.lessons" id="LESSONS{{topic.id}}">
         <div class="circles">
           <div class="lesson mat-elevation-z8">
+            <circle-progress [showImage]="true" [percent]="85" [animation]="true" [responsive]="true" class="progressBarLesson">
+            </circle-progress>
           </div>
         </div>
         <div class="lessonText">

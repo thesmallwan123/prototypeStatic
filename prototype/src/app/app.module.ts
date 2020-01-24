@@ -25,6 +25,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import { MatTooltipModule } from '@angular/material';
 import { GetDataService } from './services/get-data.service';
 import { NgxPrettyCheckboxModule } from 'ngx-pretty-checkbox';
+import { NgCircleProgressModule } from 'ng-circle-progress';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,13 @@ import { NgxPrettyCheckboxModule } from 'ngx-pretty-checkbox';
     AppRoutingModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    NgCircleProgressModule.forRoot({
+      radius: 100,
+      outerStrokeWidth: 16,
+      innerStrokeWidth: 0,
+      outerStrokeColor: "#78C000",
+      animationDuration: 0,
+    }),
   ],
   providers: [GetDataService],
   bootstrap: [AppComponent]

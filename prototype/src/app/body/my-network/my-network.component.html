@@ -9,12 +9,25 @@
                 <div mat-card-avatar class="personImage">
                     <img class="imageTop" src="../../../assets/myNetwork/people/person_1_head.png" alt="">
                 </div>
-                <div class="Fname">{{person.firstName}}</div>
-                <div class="Surname">{{person.surName}}</div>
+                <div class="Fname">{{person.firstName}} {{person.surName}}</div>
+                <!-- <div class="Surname">}</div> -->
             </div>
             <div class="main">
                 <mat-divider></mat-divider>
-                Hi
+                <p>For more information about topic {{person.badgeID}}, contact me at:</p>
+                <br>
+                <div class="icons">
+                    <mat-divider></mat-divider>
+                    <div class="icon calendar" (click)="showDiv('calendar')"></div>
+                    <div class="icon mail" (click)="showDiv('mail')"></div>
+                    <div class="icon phone" (click)="showDiv('phone')"></div>
+                </div>
+                <div class="iconTxt">
+                    <div id="hideTxtCalendar" class="hideTxtCalendar">Agenda</div>
+                    <div id="hideTxtMail" class="hideTxtMail">{{person.email}}</div>
+                    <div id="hideTxtPhone" class="hideTxtPhone">{{person.PhoneNumber}}</div>
+                </div>
+                
             </div>
         </div>
     </mat-card>

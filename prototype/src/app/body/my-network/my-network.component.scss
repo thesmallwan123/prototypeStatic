@@ -9,7 +9,6 @@
 }
 
 .people{
-    // max-width: 100px;
     background-color: transparent;
     display: flex;
     flex-direction: row;
@@ -22,7 +21,7 @@
     }
     .p-1Des{
         display: none;
-        width: 170px;
+        width: 180px;
         position: relative;
         flex-direction: column;
         .traingle{
@@ -38,7 +37,6 @@
         .card-body{
             display: flex;
             flex-direction: column;
-            // background-color: red;
             margin-top: -40px;
             .card-top{
                 display: flex;
@@ -46,7 +44,9 @@
                 flex-direction: row;
                 justify-content: space-around;
                 margin-bottom: 10px;
+                min-height: 30px;
                 .personImage{
+                    margin-top: -15px;
                     .imageTop{
                         width: 50px;
                     }
@@ -54,11 +54,49 @@
             }
             .main{
                 display: flex;
-                flex-direction: row;
+                flex-direction: column;
+                .icons{
+                    min-height: 40px;
+                    display: flex;
+                    justify-content: space-evenly;
+                    .icon{
+                        margin-top: 10px;
+                        min-height: 40px;
+                        min-width: 40px;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                    }
+                    .calendar{
+                        background-image: url("../../../assets/myNetwork/people/Icons/icon_calendar.svg");
+                    }
+                    
+                    .mail{
+                        background-image: url("../../../assets/myNetwork/people/Icons/icon_mail.svg");
+                    }
+                    
+                    .phone{
+                        background-image: url("../../../assets/myNetwork/people/Icons/icon_phone.svg");
+                    }
+
+                }
+                .iconTxt{
+                    #hideTxtCalendar, #hideTxtMail, #hideTxtPhone{
+                        display: none;
+                    }
+                    
+                    #txtCalendar, #txtMail, #txtPhone{
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
             }
         }
     }
     .p-1:hover + .p-1Des{
+        display: flex;
+    }
+
+    .p-1Des:hover{
         display: flex;
     }
     

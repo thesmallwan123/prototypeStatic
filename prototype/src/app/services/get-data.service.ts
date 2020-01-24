@@ -851,7 +851,7 @@ export class GetDataService {
     {id: 19, title: 'Incident Management Badge', image: '../../../assets/badges/19.svg'},
     ]
   people: Object = [
-    {id: 1, firstName: "jennifer", surName: "Cyr", email: "lafayette_bedn@KLM.com", PhoneNumber: "248-884-7485", badgeID: 9}
+    {id: 1, firstName: "Jennifer", surName: "Cyr", email: "Jennifer.Cyr@KLM.com", PhoneNumber: "248-884-7485", badgeID: 9}
   ]
 
 

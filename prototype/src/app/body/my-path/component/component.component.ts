@@ -18,15 +18,13 @@ export class ComponentComponent implements OnInit {
   idTopic = 0;
   idLesson:any = 0;
   width;
-  percentageDoneTopic;
-  
+
   
   constructor(private getData: GetDataService) {}
   ngOnInit() {
     this.Comp();
   }
   showLessons(id) {
-    
     this.width = 0;
     const element2 = document.getElementById("viewLesson" + id);
     element2.classList.add('viewLesson');
@@ -67,13 +65,8 @@ export class ComponentComponent implements OnInit {
   Lesson(a,i){
     this.lessons = [];
     for(let c=0; c < this.allTopics[this.idTopic].lessons.length; c++){
-      
-      //GOES WRONG, ID LESSONS WORD EEN OBJECT
       this.idLesson = this.allTopics[this.idTopic].lessons[c];
-
-
       if(typeof(this.idLesson) !== "number"){
-        //this is correct, the idLesson becomes an object after you reroute to myPath.
         //This calls the correct key of the object
         this.idLesson = this.idLesson.id;
         this.lessons.push(this.allLessons[this.idLesson]);
