@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GetDataService } from '../../services/get-data.service';
 
 @Component({
   selector: 'app-my-network',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MyNetworkComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private getData: GetDataService
+  ) { }
+
+
+  allPeople;
 
   ngOnInit() {
+    this.displayPerson();
+  }
+
+  checkBadge(){
+
+  }
+
+  displayPerson(){
+    this.allPeople = this.getData.getPeople()
+    console.log(this.allPeople)
   }
 
 }

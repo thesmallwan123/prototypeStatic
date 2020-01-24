@@ -26,6 +26,7 @@ export class LessonComponent implements OnInit {
   allTopic = this.getData.getTopic();
   currentTopic;
   topicId;
+  lessonsLeft: number = 0;
   
   
   
@@ -35,7 +36,12 @@ export class LessonComponent implements OnInit {
     this.id = parseInt(this.route.snapshot.paramMap.get('idLesson'));
     this.currentTopic = this.allTopic[this.topicId];
     this.checkToQuiz();    
+
+
+    this.lessonsLeft = this.getData.howManyLessonsLeft(this.currentTopic);
   }
+
+  //checks if the user should go to the quiz, based on the url
   checkToQuiz(){
     var lastItem = this.currentTopic.lessons.length -1;
     lastItem = this.currentTopic.lessons[lastItem];
@@ -65,7 +71,7 @@ export class LessonComponent implements OnInit {
   //Reinitialises the pages, and calculates the new % done of the lesson
   getPages(){
     this.allPerc = [];
-    this.mustHavePages = this.allLessons2[this.id].pageID
+    this.mustHavePages = this.allLessons2[this.id].pageID;
     for(let i =0; i<this.mustHavePages.length;i++){
 
       this.page = this.allPages[this.mustHavePages[this.pageID]]
@@ -93,7 +99,10 @@ export class LessonComponent implements OnInit {
   
   //Go to Previous page
   previousPage(){
+    
     this.pageID = this.pageID - 1;
+    this.getData.removePages(this.allPages[this.mustHavePages[this.pageID]]);
+    // this.calcPerc();
     this.getPages();
   }
   

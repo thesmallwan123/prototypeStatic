@@ -19,23 +19,22 @@ export class PageComponent implements OnInit {
     " badge"
   ];
   lessonsLeft;
-  components;
-  topics;
-
-
-
+  topicId;
+  currentTopic;
   finalText:any = "";
+  allTopic = this.Getdata.getTopic();
 
+  
   ngOnInit() {
+    this.topicId = parseInt(this.route.snapshot.paramMap.get('idTop'));
+    this.topicId = this.topicId -1;
+    this.currentTopic = this.allTopic[this.topicId];
     this.calcLessonsLeft();
     this.initText();
   }
 
   calcLessonsLeft(){
-    this.components = this.Getdata.getComp();
-    this.components = this.components[3];
-    this.topics = this.components.topic.length;
-    return this.lessonsLeft = this.topics;
+    this.lessonsLeft = this.Getdata.howManyLessonsLeft(this.currentTopic);
   }
 
   initText(){

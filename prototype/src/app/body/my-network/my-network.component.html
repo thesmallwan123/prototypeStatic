@@ -1,1 +1,21 @@
 <div class="image"></div>
+
+<div class="people" *ngFor="let person of allPeople">
+    <img class="p-1" src="../../../assets/myNetwork/people/person_1.svg" alt="">
+    <mat-card class="p-1Des">
+        <div class="traingle"></div>
+        <div class="card-body">            
+            <div class="card-top">
+                <div mat-card-avatar class="personImage">
+                    <img class="imageTop" src="../../../assets/myNetwork/people/person_1_head.png" alt="">
+                </div>
+                <div class="Fname">{{person.firstName}}</div>
+                <div class="Surname">{{person.surName}}</div>
+            </div>
+            <div class="main">
+                <mat-divider></mat-divider>
+                Hi
+            </div>
+        </div>
+    </mat-card>
+</div>

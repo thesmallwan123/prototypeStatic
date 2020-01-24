@@ -7,3 +7,59 @@
     background-image: url('../../../assets/myNetwork/myNetwork.png');
     background-size: cover;
 }
+
+.people{
+    // max-width: 100px;
+    background-color: transparent;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 245px;
+    left: 30%;
+    .p-1{
+        width: 90px;
+        position: relative;
+    }
+    .p-1Des{
+        display: none;
+        width: 170px;
+        position: relative;
+        flex-direction: column;
+        .traingle{
+            margin-left: -40px;
+            width: 0;
+            height: 0;
+            margin-top: -4px;
+            border-left: 0px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 50px solid white;
+            transform: rotate(45deg);
+        }
+        .card-body{
+            display: flex;
+            flex-direction: column;
+            // background-color: red;
+            margin-top: -40px;
+            .card-top{
+                display: flex;
+                width: 100%;
+                flex-direction: row;
+                justify-content: space-around;
+                margin-bottom: 10px;
+                .personImage{
+                    .imageTop{
+                        width: 50px;
+                    }
+                }
+            }
+            .main{
+                display: flex;
+                flex-direction: row;
+            }
+        }
+    }
+    .p-1:hover + .p-1Des{
+        display: flex;
+    }
+    
+}

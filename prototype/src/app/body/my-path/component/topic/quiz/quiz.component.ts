@@ -33,6 +33,8 @@ export class QuizComponent implements OnInit {
   awnsered = 0;
   userAwnser=[];
   Perc: number = 0;
+  awnser;
+  lesson;
   i;
 
   ngOnInit() {
@@ -59,21 +61,24 @@ export class QuizComponent implements OnInit {
 
   showButton(){
     if(this.checkAwnser() == true){
-      //Still need to change the dots to green as well
       document.getElementById("bottom").style.background='#33cc9930';
-      document.getElementById("hideButt").setAttribute("id", "showButt")
-      document.getElementById("showButt").setAttribute("id", "hideButt")
+      document.getElementById("showButt").setAttribute("id", "hideButtGood")
       document.getElementById("hideCorrText").setAttribute("id", "showCorrText")
+      //Still need to change the dots to green as well
+      for(this.i=0;this.i<this.currentQuiz.questions[this.questionID].correctAwnser.length; this.i++){
+        if(document.getElementById("1").style.backgroundColor !== "rgba(51,204,153)"){
+        }
+      }
       
       
       this.currentQuiz.questions[this.questionID].done = 100;
     }
     else{
-      for(this.i=0;this.i<this.currentQuiz.questions[this.questionID].correctAwnser.length; this.i++){
-        if(document.getElementById("1").style.backgroundColor !== "rgba(51,204,153)"){
-        }
-      }
+      this.endQuiz();
       document.getElementById("1").style.color = "rgba(255, 0, 0))"
+      document.getElementById("showButt").setAttribute("id", "hideButt")
+      document.getElementById("hideButtWrong").setAttribute("id", "showButtWrong")
+      document.getElementById("hideWrongText").setAttribute("id", "showWrongText")
       document.getElementById("bottom").style.background='rgba(255, 0, 0, 0.1)'; 
     }
   }
@@ -106,16 +111,27 @@ export class QuizComponent implements OnInit {
   }
 
   endQuiz(){
-    this.questionID = this.questionID +1;
-    if(this.questionID < this.currentQuiz.questions.length){
-      this.currentQuizID = this.currentQuizID + 1;/*Because we do -1 in the init to get the correct quiz*/
-      window.location.href = "http://localhost:4200/quiz/"+this.currentQuizID+"/"+this.questionID;
+    if(this.checkAwnser() == true){
+      this.questionID = this.questionID +1;
+      if(this.questionID < this.currentQuiz.questions.length){
+        this.currentQuizID = this.currentQuizID + 1;/*Because we do -1 in the init to get the correct quiz*/
+        window.location.href = "http://localhost:4200/quiz/"+this.currentQuizID+"/"+this.questionID;
+      }
+      else{
+        this.topicId = this.topicId +1;
+        var lessonID = this.allTopics[this.topicId].lessons[0];
+        return window.location.href = "http://localhost:4200/"+this.topicId+"/lesson/"+lessonID;
+      }
     }
     else{
+      this.topicId = this.topicId -1;
+      this.lesson = this.allTopics[this.topicId].lessons[0];
       this.topicId = this.topicId +1;
-      var lessonID = this.allTopics[this.topicId].lessons[0];
-      return window.location.href = "http://localhost:4200/"+this.topicId+"/lesson/"+lessonID;
     }
+  }
+  
+  goLesson(){
+    return window.location.href = "http://localhost:4200/"+this.topicId+"/lesson/"+this.lesson;
   }
 
 

@@ -113,66 +113,66 @@ export class GetDataService {
     ]
   
   lessons: Object = [
-    {id: 0, done: 0,title: "This is basic test", pageID:[28]},
-    {id: 1, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 2, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 3, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 4, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 5, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 6, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 7, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 8, done: 0,title: "This is basic test", pageID:[28, 29]},
-    {id: 9, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 10, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 11, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 12, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 13, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 14, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 15, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 16, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 17, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 18, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 19, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 20, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 21, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 22, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 23, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 24, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 25, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 26, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 27, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 28, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 29, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 30, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 31, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 32, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 33, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 34, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 35, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 36, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 37, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 38, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 39, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 40, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 41, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 42, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 43, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 44, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 45, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 46, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 47, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 48, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 49, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 50, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 51, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 52, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 53, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 54, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 55, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 56, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 57, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 58, done: 0, title: "This is basic test", pageID:[28, 29]},
-    {id: 59, done: 0, title: "This is basic test", pageID:[28, 29]},
+    {id: 0, done: 0,title: "This is a basic test", pageID:[28]},
+    {id: 1, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 2, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 3, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 4, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 5, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 6, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 7, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 8, done: 0,title: "This is a basic test", pageID:[28, 29]},
+    {id: 9, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 10, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 11, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 12, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 13, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 14, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 15, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 16, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 17, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 18, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 19, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 20, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 21, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 22, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 23, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 24, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 25, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 26, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 27, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 28, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 29, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 30, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 31, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 32, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 33, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 34, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 35, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 36, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 37, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 38, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 39, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 40, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 41, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 42, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 43, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 44, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 45, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 46, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 47, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 48, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 49, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 50, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 51, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 52, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 53, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 54, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 55, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 56, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 57, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 58, done: 0, title: "This is a basic test", pageID:[28, 29]},
+    {id: 59, done: 0, title: "This is a basic test", pageID:[28, 29]},
     {id: 60, done: 0, title: "Basic Explanation", pageID:[0,1,2,3,4,5,6,7,8,29]},
     {id: 61, done: 0, title: "DevOps Goals", pageID:[9,10,11,12,13,14,29]},
     {id: 62, done: 0, title: "Plan", pageID:[15,16,17,18,29]},
@@ -849,13 +849,15 @@ export class GetDataService {
     {id: 17, title: 'IT Service Management Badge', image: '../../../assets/badges/17.svg'},
     {id: 18, title: 'Change Management badge', image: '../../../assets/badges/18.svg'},
     {id: 19, title: 'Incident Management Badge', image: '../../../assets/badges/19.svg'},
+    ]
+  people: Object = [
+    {id: 1, firstName: "jennifer", surName: "Cyr", email: "lafayette_bedn@KLM.com", PhoneNumber: "248-884-7485", badgeID: 9}
   ]
 
 
 
 
   constructor() { }
-  percDone;
   getComp() {
     const comp = this.components;
     return comp;
@@ -881,8 +883,23 @@ export class GetDataService {
     return quiz;
   }
 
+  getPeople(){
+    const people = this.people;
+    return people;
+  }
+
   setPages(row){
     this.pages[row.id].done = 100;
+  }
+  removePages(row){
+    this.pages[row.id].done = 0;
+  }
+
+  howManyLessonsLeft(topic){
+    var lessonsLeft = topic.lessons.length;
+    lessonsLeft = lessonsLeft -1;
+    return lessonsLeft;
+    
   }
 
   calcPercentage(allAchievedOrNot){
