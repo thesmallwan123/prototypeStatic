@@ -62,16 +62,12 @@ export class QuizComponent implements OnInit {
   showButton(){
     if(this.checkAwnser() == true){
       document.getElementById("bottom").style.background='#33cc9930';
-      document.getElementById("showButt").setAttribute("id", "hideButtGood")
+      document.getElementById("showButt").setAttribute("id", "hideButt")
+      document.getElementById("hideButtGood").setAttribute("id", "showButtGood")
       document.getElementById("hideCorrText").setAttribute("id", "showCorrText")
       //Still need to change the dots to green as well
-      for(this.i=0;this.i<this.currentQuiz.questions[this.questionID].correctAwnser.length; this.i++){
-        if(document.getElementById("1").style.backgroundColor !== "rgba(51,204,153)"){
-        }
-      }
-      
-      
       this.currentQuiz.questions[this.questionID].done = 100;
+      
     }
     else{
       this.endQuiz();
