@@ -3,7 +3,9 @@
     {{components.title}} -<div class="componentPercentageDone">{{components.done}}%</div>
   </div>
   <div class="combinedLessonsAndTopic"  *ngFor="let topic of components.topic">
+    <!-- the topic -->
     <div ngClass="{{topic.id}} mat-elevation-z2 topic"  (mouseenter)=showLessons(topic.id)>
+      <!-- The blue image on the left side if a topic -->
       <div class="frontImageTopic">
         <div class="frontImageTopicCircle">
           <div class="frontImageTopicCircleSquare">
@@ -11,29 +13,38 @@
           </div>
         </div>
       </div>
+      <!-- The top of the topic -->
       <div class="topicHead">
         <div class="topicTitle">Topic {{topic.id}}: {{topic.title}}</div>
         <div class="topicSubtitle">{{topic.description}}</div>
       </div>
+      <!-- The percentageBar of the topic -->
       <div class="percentageIndicator">  
         <mat-progress-bar class="progressBar" [value]=topic.done color="primary"></mat-progress-bar>
         <div class="percentageDone">{{topic.done}}%</div>
       </div>
     </div>
+
+    <!-- The lesson bar onderneath the topic -->
     <div class="viewLessonHidden" id="viewLesson{{topic.id}}">
+      <!-- all the lessons -->
       <div class="lessons" routerLink="/{{topic.id}}/lesson/{{lesson.id}}" *ngFor="let lesson of topic.lessons" id="LESSONS{{topic.id}}">
         <div class="circles">
           <div class="lesson mat-elevation-z8">
-            <circle-progress [showImage]="true" [percent]="85" [animation]="true" [responsive]="true" class="progressBarLesson">
+            <!-- the progressbar around the lesson -->
+            <circle-progress [showImage]="true" [percent]="30" [animation]="true" [responsive]="true" class="progressBarLesson">
             </circle-progress>
           </div>
         </div>
+        <!-- text underneath the lesson -->
         <div class="lessonText">
           <div class="lessonTXT">
             {{lesson.title}}
           </div>
         </div>
       </div>
+
+      <!-- the orange bar behind all the lessons -->
       <div class="divideBar" [style.width.px]=width></div>
     </div>
   </div>

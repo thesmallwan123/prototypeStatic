@@ -6,12 +6,11 @@ import { MyNetworkComponent } from './body/my-network/my-network.component';
 import { MyPathComponent } from './body/my-path/my-path.component';
 import { BodyComponent } from './body/body.component';
 import { ComponentComponent } from './body/my-path/component/component.component';
-import { TopicComponent } from './body/my-path/component/topic/topic.component';
-import { LessonComponent } from './body/my-path/component/topic/lesson/lesson.component';
-import { QuizComponent } from './body/my-path/component/topic/quiz/quiz.component';
+import { LessonComponent } from './body/my-path/component/lesson/lesson.component';
+import { QuizComponent } from './body/my-path/component/quiz/quiz.component';
 import { NavigationComponent } from './head/navigation/navigation.component';
 import { HeadComponent } from './head/head.component';
-import { PageComponent } from './body/my-path/component/topic/lesson/page/page.component';
+import { PageComponent } from './body/my-path/component/lesson/page/page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
@@ -33,7 +32,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     MyPathComponent,
     BodyComponent,
     ComponentComponent,
-    TopicComponent,
     LessonComponent,
     QuizComponent,
     NavigationComponent,

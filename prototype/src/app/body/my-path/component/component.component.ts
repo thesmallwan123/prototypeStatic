@@ -10,11 +10,9 @@ export class ComponentComponent implements OnInit {
   
   topics =[];
   lessons = [];
-  result = [];
   components:any = this.getData.getComp();
   allTopics = this.getData.getTopic();
   allLessons = this.getData.getLessons();
-  length;
   idTopic = 0;
   idLesson:any = 0;
   width;
@@ -23,7 +21,10 @@ export class ComponentComponent implements OnInit {
   constructor(private getData: GetDataService) {}
   ngOnInit() {
     this.Comp();
+    console.log(this.lessons)
   }
+
+//fixes orangeBar-width in the Overview
   showLessons(id) {
     this.width = 0;
     const element2 = document.getElementById("viewLesson" + id);
@@ -43,7 +44,7 @@ export class ComponentComponent implements OnInit {
   
   
   
-  
+//gets all the Components
   Comp() {
     for (let i = 0; i < this.components.length; i++) {
       this.Top(i);
@@ -53,6 +54,7 @@ export class ComponentComponent implements OnInit {
     return this.components;
   }
   
+//gets all the Topics
   Top(i) {
     this.topics = [];
     for (let a = 0; a < this.components[i].topic.length; a++) {
@@ -62,6 +64,8 @@ export class ComponentComponent implements OnInit {
       this.idTopic = this.idTopic + 1;
     }
   }
+
+//gets all the lessons
   Lesson(a,i){
     this.lessons = [];
     for(let c=0; c < this.allTopics[this.idTopic].lessons.length; c++){
