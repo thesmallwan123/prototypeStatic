@@ -19,13 +19,12 @@ export class PageComponent implements OnInit {
     " badge"
   ];
   allTopic = this.Getdata.getTopic();
-  lessonsLeft;
+  idLesson = parseInt(this.route.snapshot.paramMap.get('idLesson'));
   topicId = parseInt(this.route.snapshot.paramMap.get('idTop')) -1;
+  lessonsLeft;
   currentTopic = this.allTopic[this.topicId];
   finalText:any = "";
   
-  idLesson = parseInt(this.route.snapshot.paramMap.get('idLesson'));
-
   
   ngOnInit() {
     this.calcLessonsLeft();
@@ -34,10 +33,8 @@ export class PageComponent implements OnInit {
 
   // This calculates the amount of the lessons left
   calcLessonsLeft(){
-    var lessonsLeft = this.Getdata.howManyLessons(this.currentTopic);
-    
-    console.log(this.idLesson)
-    this.lessonsLeft = 1;
+    var maxLesson = this.currentTopic.lessons[this.currentTopic.lessons.length -1]
+    return this.lessonsLeft = maxLesson - this.idLesson;
   }
 
   //inSitialises the text to the finalText
