@@ -9,7 +9,6 @@ import { ComponentComponent } from './body/my-path/component/component.component
 import { TopicComponent } from './body/my-path/component/topic/topic.component';
 import { LessonComponent } from './body/my-path/component/topic/lesson/lesson.component';
 import { QuizComponent } from './body/my-path/component/topic/quiz/quiz.component';
-import { FooterComponent } from './footer/footer.component';
 import { NavigationComponent } from './head/navigation/navigation.component';
 import { HeadComponent } from './head/head.component';
 import { PageComponent } from './body/my-path/component/topic/lesson/page/page.component';
@@ -37,7 +36,6 @@ import { NgCircleProgressModule } from 'ng-circle-progress';
     TopicComponent,
     LessonComponent,
     QuizComponent,
-    FooterComponent,
     NavigationComponent,
     HeadComponent,
     PageComponent,
