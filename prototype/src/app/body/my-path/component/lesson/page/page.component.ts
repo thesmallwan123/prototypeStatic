@@ -18,25 +18,29 @@ export class PageComponent implements OnInit {
     " more lesson(s) and a quiz away from your ",
     " badge"
   ];
-  lessonsLeft;
-  topicId;
-  currentTopic;
-  finalText:any = "";
   allTopic = this.Getdata.getTopic();
+  lessonsLeft;
+  topicId = parseInt(this.route.snapshot.paramMap.get('idTop')) -1;
+  currentTopic = this.allTopic[this.topicId];
+  finalText:any = "";
+  
+  idLesson = parseInt(this.route.snapshot.paramMap.get('idLesson'));
 
   
   ngOnInit() {
-    this.topicId = parseInt(this.route.snapshot.paramMap.get('idTop'));
-    this.topicId = this.topicId -1;
-    this.currentTopic = this.allTopic[this.topicId];
     this.calcLessonsLeft();
     this.initText();
   }
 
+  // This calculates the amount of the lessons left
   calcLessonsLeft(){
-    this.lessonsLeft = this.Getdata.howManyLessonsLeft(this.currentTopic);
+    var lessonsLeft = this.Getdata.howManyLessons(this.currentTopic);
+    
+    console.log(this.idLesson)
+    this.lessonsLeft = 1;
   }
 
+  //inSitialises the text to the finalText
   initText(){
     for(let i =0; i<this.txt.length;i++){
       this.finalText = this.finalText + this.txt[i];

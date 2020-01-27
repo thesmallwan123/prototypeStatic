@@ -8,14 +8,10 @@ import { GetDataService } from '../../../../services/get-data.service';
   styleUrls: ['./lesson.component.scss']
 })
 export class LessonComponent implements OnInit {
-
-  constructor(
-    private getData: GetDataService,
-    private route: ActivatedRoute
-    ) { }
+  
   allLessons2;
   allPages = this.getData.getPages();
-  id
+  id = parseInt(this.route.snapshot.paramMap.get('idLesson'));
   page: any =0;
   lesson: any =0;
   mustHavePages;
@@ -24,21 +20,21 @@ export class LessonComponent implements OnInit {
   allPerc = [];
   endPage = false;
   allTopic = this.getData.getTopic();
-  currentTopic;
-  topicId;
+  topicId = parseInt(this.route.snapshot.paramMap.get('idTop')) - 1;
+  currentTopic = this.allTopic[this.topicId];
   lessonsLeft: number = 0;
+
+  constructor(
+    private getData: GetDataService,
+    private route: ActivatedRoute
+    ) { }
+
   
   
   
   ngOnInit() { 
-    this.topicId = parseInt(this.route.snapshot.paramMap.get('idTop'));
-    this.topicId = this.topicId -1;
-    this.id = parseInt(this.route.snapshot.paramMap.get('idLesson'));
-    this.currentTopic = this.allTopic[this.topicId];
-    this.checkToQuiz();    
-
-
-    this.lessonsLeft = this.getData.howManyLessonsLeft(this.currentTopic);
+    this.checkToQuiz();
+    this.lessonsLeft = this.getData.howManyLessons(this.currentTopic);
   }
 
   //checks if the user should go to the quiz, based on the url

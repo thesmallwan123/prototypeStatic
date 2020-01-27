@@ -8,10 +8,12 @@
     
     <!-- Main body of the card -->
     <div class="body" *ngIf="isLoading">
+        <!-- if question is multiple choise -->
         <div class="awnserBoxMultipleChoise" *ngIf="questionType == '0'">
             <div class="questionMultipleChoise">{{question}}</div>
+            <!-- The possible awnsers to click -->
             <ul class="possibilatys">
-                <div *ngFor="let poss of poss" class="pretty p-image p-plain p-round">
+                <div *ngFor="let poss of poss" class="pretty p-image p-plain p-default">
                     <p-checkbox id="{{poss.id}}" color="dark" stroke="fill" (click)="setAwnser($event, poss.id)">
                         {{poss.text}}
                     </p-checkbox>
@@ -19,16 +21,14 @@
             </ul>
         </div>
 
-
-
-
-
-
+        <!-- if question is open question -->
         <div class="awnserBoxOpenQuestion" *ngIf="questionType == '1'">
             <div class="userSideOfCard">
                 <div class="questionOpenQuestion">{{question}}</div>
+                <!-- AwnserBox, input for the user -->
                 <textarea type="text" name="awnserOpenQuestion" class="awnserOpenQuestion" placeholder="Type your awnser here"></textarea>
             </div>
+            <!-- The correct awnser, user needs to click the awnser he / she had correct. -->
             <div class="awnserSideOfCard" *ngIf="awnsered">
                 <div class="awnserTitle">Correct Awnser (click what you have correct):</div>
                 <div class="awnser">
@@ -36,12 +36,6 @@
                 </div>
             </div>
         </div>
-
-
-
-
-
-
     </div>
 
 
@@ -52,11 +46,14 @@
         <!-- Progress bar -->
         <mat-progress-bar class="centerBar" [value]=Perc></mat-progress-bar>
         
-        <!-- Next Page -->
+        <!-- Buttons -->
         <button *ngIf="questionType == '0'" id="showButt" class="bottomButton check" (click)="showButton()"> CHECK </button>
         <button *ngIf="questionType == '1'" id="showButt" class="bottomButton check" (click)="checkOpenQuestionFirst()"> CHECK </button>
+        <!-- when awnser is correct -->
         <button id="hideButtGood" mat-fab mat-button-base class="bottomButton next" (click)="endQuiz()"> > </button>
+        <!-- when awnser is wrong -->
         <button id="hideButtWrong" mat-fab mat-button-base class="bottomButton goLesson" (click)="goLesson()"> > </button>
 
     </div>
+    
 </mat-card>

@@ -895,7 +895,7 @@ export class GetDataService {
     this.pages[row.id].done = 0;
   }
 
-  howManyLessonsLeft(topic){
+  howManyLessons(topic){
     var lessonsLeft = topic.lessons.length;
     lessonsLeft = lessonsLeft -1;
     return lessonsLeft;

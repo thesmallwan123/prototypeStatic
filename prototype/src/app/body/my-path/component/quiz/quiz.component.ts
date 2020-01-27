@@ -26,16 +26,13 @@ export class QuizComponent implements OnInit {
   currentQuizID = this.topicId -1;
   currentQuiz = this.allQuizes[this.currentQuizID];
   question = this.currentQuiz.questions[this.questionID].question;
-  awnsers = this.currentQuiz.questions[this.questionID].awnser;
   questionType = this.checkQuestionType();
   poss = this.currentQuiz.questions[this.questionID].possibilatys;
   currentTopic = this.allTopics[this.currentQuizID];
   awnsered = 0;
   userAwnser=[];
   Perc: number = 0;
-  awnser;
   lesson;
-  i;
 
   ngOnInit() {
     this.calcPerc();
@@ -44,6 +41,7 @@ export class QuizComponent implements OnInit {
     this.isLoading = false;
   }
 
+  //this sets the awnsers when an awnser is clicked.
   setAwnser(event, id){
     this.userAwnser.sort()
     if(event.target.checked == true || event.srcElement.style.backgroundColor !== "rgb(51, 204, 153)"){
@@ -58,8 +56,9 @@ export class QuizComponent implements OnInit {
     this.userAwnser.sort()
   }
 
-
+  // shows buttons in the bottom of the mat-card
   showButton(){
+    // if awnser is true, make some ID's green, show the button to next topic
     if(this.checkAwnser() == true){
       document.getElementById("bottom").style.background='#33cc9930';
       document.getElementById("showButt").setAttribute("id", "hideButt")
@@ -69,6 +68,9 @@ export class QuizComponent implements OnInit {
       this.currentQuiz.questions[this.questionID].done = 100;
       
     }
+
+    // if awnser is false, make some ID's red, show the button to first lesson
+    // user cant submit new awnser
     else{
       this.endQuiz();
       document.getElementById("1").style.color = "rgba(255, 0, 0))"
@@ -79,6 +81,9 @@ export class QuizComponent implements OnInit {
     }
   }
   
+  //checks how many times the submitButton is clicked 
+  //first to submit awnser, awnser is shown after click
+  //second to check if the user clicked all the awnsers
   checkOpenQuestionFirst(){
     if(this.questionType == 1){
       this.awnsered = this.awnsered + 1;
@@ -88,6 +93,7 @@ export class QuizComponent implements OnInit {
     }
   }
 
+  //checks if the iven awnsers are correct
   checkAwnser(){
     this.userAwnser.sort()
       // Check if the arrays are the same length
@@ -106,6 +112,7 @@ export class QuizComponent implements OnInit {
     return true;
   }
 
+  //redirects to next question or topic
   endQuiz(){
     if(this.checkAwnser() == true){
       this.questionID = this.questionID +1;
@@ -119,6 +126,8 @@ export class QuizComponent implements OnInit {
         return window.location.href = "http://localhost:4200/"+this.topicId+"/lesson/"+lessonID;
       }
     }
+    
+    //redirects to first lesson of this topic
     else{
       this.topicId = this.topicId -1;
       this.lesson = this.allTopics[this.topicId].lessons[0];
@@ -126,25 +135,32 @@ export class QuizComponent implements OnInit {
     }
   }
   
+
+  //goes to first lesson of the topic
   goLesson(){
     return window.location.href = "http://localhost:4200/"+this.topicId+"/lesson/"+this.lesson;
   }
 
 
+  //checks the questiontype
   checkQuestionType(){
     switch (this.currentQuiz.questions[this.questionID].type){
       case 0:
+        //multiple choise
         return this.questionType = 0;
       break;
       case 1:
+        //Open question
         return this.questionType = 1;
       break;
       case 2:
+        // Drag and Drop (not implemented)
         return this.questionType = 2;
       break;
     }
   }
 
+  //calculates the percentage of the quiz
   calcPerc(){
     return this.Perc = this.Getdata.calcPercentage(this.currentQuiz.questions);
   }
