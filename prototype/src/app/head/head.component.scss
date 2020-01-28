@@ -1,11 +1,10 @@
 .head{
     display: flex;
     flex-direction: row;
-    height: 200px;
+    height: fit-content;
     background-color: #0099ff;
     padding-bottom: 10px;
     min-height: 93px;
-
     .leftSide{
         display: flex;
         flex-direction: column;
@@ -39,7 +38,7 @@
 
     .rightSide{
         width: 63%;
-        height: 100%;
+        min-height: 200px;
         background-repeat: no-repeat;
         margin-right: 2%;
         margin-top: 10px;
