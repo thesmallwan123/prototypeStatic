@@ -13,21 +13,12 @@ export class MyNetworkComponent implements OnInit {
   ) { }
 
 
-  allPeople;
+  allPeople = this.getData.getPeople();
 
   ngOnInit() {
-    this.displayPerson();
   }
 
-  checkBadge(){
-
-  }
-
-  displayPerson(){
-    this.allPeople = this.getData.getPeople()
-    console.log(this.allPeople)
-  }
-
+  // shows onclick the div underneath the icon
   showDiv(type){
     switch(type){
       case "calendar":
