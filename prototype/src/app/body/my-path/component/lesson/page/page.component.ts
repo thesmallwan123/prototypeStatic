@@ -15,7 +15,7 @@ export class PageComponent implements OnInit {
   title = "Lesson Completed!";
   txt = [
     "You are only ", 
-    " more lessons and a quiz away from your ",
+    " more lesson(s) and a quiz away from your ",
     " badge"
   ];
   allTopic = this.Getdata.getTopic();
@@ -33,10 +33,8 @@ export class PageComponent implements OnInit {
 
   // This calculates the amount of the lessons left
   calcLessonsLeft(){
-    var maxLesson = this.currentTopic.lessons[this.currentTopic.lessons.length -1];
-
-    this.lessonsLeft = maxLesson - this.idLesson;
-    console.log(this.lessonsLeft)
+    var maxLesson = this.currentTopic.lessons[this.currentTopic.lessons.length -1]
+    return this.lessonsLeft = maxLesson - this.idLesson;
   }
 
   //initialises the text to the finalText
