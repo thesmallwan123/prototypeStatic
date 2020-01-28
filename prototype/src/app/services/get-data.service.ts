@@ -854,47 +854,56 @@ export class GetDataService {
     {id: 1, firstName: "Jennifer", surName: "Cyr", email: "Jennifer.Cyr@KLM.com", PhoneNumber: "248-884-7485", badgeID: 9}
   ]
 
-
-
-
   constructor() { }
+
+
+  //returns all components
   getComp() {
     const comp = this.components;
     return comp;
   }
   
+  //returns all topics
   getTopic() {
     const topics = this.topics;
     return topics;
   }
 
+  //returns all lessons
   getLessons(){
     const lessons = this.lessons;
     return lessons;
   }
   
+  //returns all pages
   getPages(){
     const pages = this.pages;
     return pages;
   }
 
+  //returns all quizes
   getQuiz(){
     const quiz = this.quizes;
     return quiz;
   }
 
+  //returns all people
   getPeople(){
     const people = this.people;
     return people;
   }
 
+  //sets page to done
   setPages(row){
     this.pages[row.id].done = 100;
   }
+
+  //sets page to not done
   removePages(row){
     this.pages[row.id].done = 0;
   }
 
+  //reurns how many lessons in the topics there are
   howManyLessons(topic){
     var lessonsLeft = topic.lessons.length;
     lessonsLeft = lessonsLeft -1;
@@ -902,6 +911,7 @@ export class GetDataService {
     
   }
 
+  //calculates the % of how many items in object are done
   calcPercentage(allAchievedOrNot){
     var amount = 0;
     var result;
