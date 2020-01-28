@@ -47,7 +47,6 @@ export class QuizComponent implements OnInit {
   setAwnser(event, id){
     this.userAwnser.sort()
     if(event.target.checked == true || event.srcElement.style.backgroundColor !== "rgb(51, 204, 153)"){
-      event.srcElement.style.backgroundColor = "rgb(51, 204, 153)";
       this.userAwnser.push(id)
     }
     else{
