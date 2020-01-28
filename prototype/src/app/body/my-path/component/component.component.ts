@@ -21,7 +21,6 @@ export class ComponentComponent implements OnInit {
   constructor(private getData: GetDataService) {}
   ngOnInit() {
     this.Comp();
-    console.log(this.lessons)
   }
 
 //fixes orangeBar-width in the Overview
