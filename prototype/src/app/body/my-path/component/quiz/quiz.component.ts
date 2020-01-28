@@ -32,10 +32,12 @@ export class QuizComponent implements OnInit {
   awnsered = 0;
   userAwnser=[];
   Perc: number = 0;
+  awnsers = this.currentQuiz.questions[1].awnser;
   lesson;
 
   ngOnInit() {
     this.calcPerc();
+    console.log(this.awnsers)
   }
   ngAfterviewInit(){
     this.isLoading = false;
