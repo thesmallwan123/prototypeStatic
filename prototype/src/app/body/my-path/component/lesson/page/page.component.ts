@@ -39,8 +39,9 @@ export class PageComponent implements OnInit {
     console.log(this.lessonsLeft)
   }
 
-  //inSitialises the text to the finalText
+  //initialises the text to the finalText
   initText(){
+    //if you enter a regular lesson, not the last or one before the last
     if(this.lessonsLeft !== 0){
       for(let i =0; i<this.txt.length;i++){
         this.finalText = this.finalText + this.txt[i];
@@ -49,9 +50,11 @@ export class PageComponent implements OnInit {
         }
       }
     }
+    //if you enter the last lesson
     if(this.lessonsLeft == 1){
       this.finalText = "You are just 1 more lesson and a quiz away from your badge!"
     }
+    //if you enter the quiz
     else{
       this.finalText = "You are just 1 quiz away from your badge!"
     }
